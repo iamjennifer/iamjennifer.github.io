@@ -18,13 +18,13 @@
 
 </head>
 
-<body>
+<body itemscope itemtype="http://schema.org/CreativeWork">
 <!--[if lte IE 9]>
 	<p class="browserupgrade">You are using an <strong>outdated</strong> browser.
 	Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
 <![endif]-->
 
-	<div id="wrapper" itemscope itemtype="http://schema.org/CreativeWork">
+	<div id="wrapper">
 		<h1>i.am.jennifer</h1>
 
 		<!-- ======================== -->
@@ -46,6 +46,18 @@
 				<a href="#linkContact"><span class="topSpan">07. </span><span id="span8">CONTACT</span></a>
 			</div>
 		</nav><!-- {CLOSED} nav:main-nav -->
+
+		<div class="page-wrap">
+			<header class="main-header">
+				<a href="#main-nav" class="open-menu">
+					<img src="res/assets/images/png/nav_plus_sign.png" width="28" height="15" alt="icon for navigation" />
+				</a>
+
+				<a href="#" class="close-menu">
+					<img src="res/assets/images/png/nav_m_sign.png" width="28" height="15" alt="icon for navigation" />
+				</a>
+			</header>
+		</div>
 
 		<nav id="sideNav">
 			<h5>side navigation</h5>
@@ -69,18 +81,6 @@
 			<a data-scroll data-options='{ "easing": "linear" }' href="#firstSection"><img src="res/assets/images/png/upBtn.png" width="25" height="15" alt="go up to the top" /></a>
 		</nav><!-- {CLOSED} nav:upBtn -->
 
-		<div class="page-wrap">
-			<header class="main-header">
-				<a href="#main-nav" class="open-menu">
-					<img src="res/assets/images/png/nav_plus_sign.png" width="28" height="15" alt="icon for navigation" />
-				</a>
-
-				<a href="#" class="close-menu">
-					<img src="res/assets/images/png/nav_m_sign.png" width="28" height="15" alt="icon for navigation" />
-				</a>
-			</header>
-		</div>
-
 		<!-- ======================== -->
 		<!-- Intro Section -->
 		<!-- ======================== -->
@@ -90,13 +90,11 @@
 			<div class="introDiv">
 				<img id="desktopLogo" src="res/assets/images/png/logo_desktop.png" alt="logo" />
 				<img id="mobileLogo" src="res/assets/images/png/logo_mobile.png" alt="logo" />
-				<p itemprop="about">—noun, a designer named&nbsp;jennifer howe &nbsp; who specializes in user interface
-					design and development, &nbsp;focused on mobile devices and applications</p>
+                <p itemprop="about">—noun, a designer named&nbsp;<span class="italicFont"> jennifer howe </span>who specializes in <span class="italicFont">user interface
+                    design</span> and <span class="italicFont">development</span>, &nbsp;focused on mobile devices and applications</p>
 				<div id="pageOneCircle">
 					<a data-scroll data-options='{ "easing": "linear" }' href="#linkWho" id="pageOneBtn">
-						<!--<button id="pageOneBtn">-->
-							<img src="res/assets/images/png/pageOneCircle.png" alt="page one circle" class="objblink" />
-						<!--</button>-->
+						<img src="res/assets/images/png/pageOneCircle.png" alt="page one circle" class="objblink" />
 					</a>
 
 					<div id="pageOneCircleInside"></div>
@@ -116,7 +114,7 @@
 				<span class="subTitle">/i.am.jennifer/</span>
 			</header>
 
-			<section class="content">
+			<div class="content">
 				<div class="whoDiv">
 					<div id="whoDiv1">
 						<h4>[ DESIGNER ]</h4>
@@ -135,7 +133,7 @@
 					<img src="res/assets/images/png/smallCircle.png" alt="small circle icon" />
 					<hr>
 				</div>
-			</section>
+			</div>
 		</section>
 
 		<!-- ======================== -->
@@ -151,7 +149,7 @@
 				<span class="subTitle">/what.i.do/</span>
 			</header>
 
-			<section class="content">
+			<div class="content">
 
 				<div id="focusWrapper">
 
@@ -185,7 +183,7 @@
 					<img src="res/assets/images/png/smallCircle.png" alt="small circle icon" />
 					<hr>
 				</div>
-			</section>
+			</div>
 
 		</section>
 
@@ -201,76 +199,79 @@
 				<span class="subTitle">/what.i.know/</span>
 			</header>
 
-			<section class="content">
+			<div class="content">
 				<div id="skillWrapper">
 					<div class="skillDiv">
+
 						<div class="spinnerWrapper">
-							<div class="spinner">
-								<span></span>
-								<span></span>
+
+                            <div class="spinner">
+                                <span><span class="leftSpan"></span></span>
+								<span><span class="rightSpan"></span></span>
 							</div>
 
 							<div class="spinnerTop"></div>
 
 							<p class="number" id="counter1"></p>
-							<h4 class="spinnerTitle">{ HTML + SASS }</h4>
-							<p class="spinnerText">pretty good</p>
+							<h4 class="spinnerTitle">{ Adobe CS }</h4>
+							<p class="spinnerText">very good</p>
 
 						</div>
+
 						<div class="spinnerWrapper">
 
+
 							<div class="spinner">
-								<span id="spinner2"></span>
-								<span></span>
+								<span><span class="leftSpan" id="spinner2"></span></span>
+								<span><span class="rightSpan"></span></span>
 							</div>
 
 							<div class="spinnerTop"></div>
 
 							<p class="number" id="counter2"></p>
+							<h4 class="spinnerTitle">{ HTML5 + SASS }</h4>
+							<p class="spinnerText">Excellent</p>
+
+						</div>
+						<div class="spinnerWrapper">
+
+							<div class="spinner">
+								<span><span class="leftSpan" id="spinner3"></span></span>
+								<span><span class="rightSpan"></span></span>
+							</div>
+
+							<div class="spinnerTop"></div>
+
+							<p class="number" id="counter3"></p>
 							<h4 class="spinnerTitle">{ JavaScript }</h4>
+							<p class="spinnerText">good</p>
+
+						</div>
+						<div class="spinnerWrapper">
+
+							<div class="spinner">
+								<span><span class="leftSpan" id="spinner4"></span></span>
+								<span><span class="rightSpan"></span></span>
+							</div>
+
+							<div class="spinnerTop"></div>
+
+							<p class="number" id="counter4"></p>
+							<h4 class="spinnerTitle">{ JS Libraries }</h4>
 							<p class="spinnerText">getting better</p>
 
 						</div>
 						<div class="spinnerWrapper">
 
 							<div class="spinner">
-								<span id="spinner3"></span>
-								<span></span>
+								<span><span class="leftSpan" id="spinner5"></span></span>
+								<span><span class="rightSpan"></span></span>
 							</div>
-
-							<div class="spinnerTop"></div>
-
-							<p class="number" id="counter3"></p>
-							<h4 class="spinnerTitle">{ Node.JS }</h4>
-							<p class="spinnerText">very good</p>
-
-						</div>
-						<div class="spinnerWrapper">
-
-							<div class="spinner">
-								<span  id="spinner4"></span>
-								<span></span>
-							</div>
-
-							<div class="spinnerTop"></div>
-
-							<p class="number" id="counter4"></p>
-							<h4 class="spinnerTitle">{ Angular.JS }</h4>
-							<p class="spinnerText">not too bad</p>
-
-						</div>
-						<div class="spinnerWrapper">
-
-							<div class="spinner">
-								<span id="spinner5"></span>
-								<span></span>
-							</div>
-
 							<div class="spinnerTop"></div>
 
 							<p class="number" id="counter5"></p>
-							<h4 class="spinnerTitle">{ React.JS }</h4>
-							<p class="spinnerText">working on it</p>
+							<h4 class="spinnerTitle">{ Git + GitHub }</h4>
+							<p class="spinnerText">not too bad</p>
 
 						</div>
 
@@ -282,7 +283,7 @@
 					<img src="res/assets/images/png/smallCircle.png" alt="small circle icon" />
 					<hr>
 				</div>
-			</section>
+			</div>
 		</section>
 
 		<!-- ======================== -->
@@ -400,7 +401,7 @@
 		<a id="linkContact"></a>
 		<section id="contactSection">
 			<header>
-				<span class="setNum">07</span>
+				<span class="secNum">07</span>
 				<h2>Contact</h2>
 				<span class="subTitle">/where.i.am/</span>
 			</header>

@@ -1,0 +1,533 @@
+/* ========== [Layout] ========== */
+
+// Wrapper
+#wrapper {
+
+  @include breakpoint(mobile) {
+    width: 90%;
+    margin: 0 auto;
+    min-width: 320px;
+    max-width: 480px;
+  }
+
+  @include breakpoint(tabletPortrait) {
+    width: 90%;
+    margin: 0 auto;
+    min-width: 500px;
+    max-width: 768px;
+  }
+
+  @include breakpoint(landscape) {
+     min-width: 1024px;
+     max-width: 1280px;
+   }
+
+}
+
+// Section
+section {
+
+  @include breakpoint(mobile) {
+    width: 100%;
+    height: 100%;
+  }
+
+  width: 100%;
+  height: 760px;
+  border: 1px solid $white;
+
+  .content {
+    .connectLine {
+      @include breakpoint(mobile) {
+        display: none;
+      }
+
+      margin-top: 50px;
+      hr {
+        width: 1px;
+        height: 360px; // line length
+        border: none;
+        border-right: 1px dashed $black;
+      }
+    }
+  }
+}
+
+// Intro Section
+#introSection {
+  h2 {
+    display: none;
+  }
+
+  .introDiv {
+
+    @include breakpoint(mobile) {
+      margin-top: 190px;
+      margin-left: 20px;
+      height: 290px;
+    }
+
+    margin-top: 348px;
+    margin-left: 6.5%;
+
+    #desktopLogo {
+      @include breakpoint(mobile) {
+        display: none;
+      }
+      min-width: 125px;
+    }
+
+    #mobileLogo {
+      @include breakpoint(mobile) {
+        display: block;
+      }
+
+      display: none;
+    }
+
+    P {
+      @include breakpoint(mobile) {
+        padding-top: 30px;
+        width: 200px ;
+      }
+      font-family: $introFontStackRegular;
+      width: 407px;
+    }
+
+    .italicFont {
+      font-family: $introFontStackItalic;
+      font-weight: 700;
+      letter-spacing: 0.02rem;
+      font-size: 0.9rem;
+    }
+
+    #pageOneCircle {
+
+      @include breakpoint(mobile) {
+        display: none;
+      }
+
+      @include breakpoint(tabletPortrait) {
+        display: none;
+      }
+
+      @include breakpoint(Landscape) {
+        display: block;
+      }
+
+      margin-top: -18px;
+      margin-left: 175px;
+
+      @include keyframes(blink){
+        0% {
+          opacity:1;
+        }
+        50% {
+          opacity:0.5;
+        }
+        100% {
+          opacity:1;
+        }
+      }
+
+      .objblink {
+        @include transition(all 1s ease-in-out);
+        @include animation(blink);
+      }
+      // ?? not moving yet
+      #pageOneCircleInside {
+        border-bottom: 1px dashed $black;
+        border-left: 1px dashed $black;
+        margin-top: 5px;
+        margin-left: 9px;
+        width: 0;
+        height: 0;
+        position: relative;
+      }
+    // ?? not moving yet
+      #cover {
+        width: 8px;
+        height: 2px;
+        background-color: $white;
+        position: absolute;
+        margin-left: 5px;
+        margin-top: -1px;
+        z-index: 10;
+      }
+
+    }
+  }
+}
+
+// Who Section
+#whoSection {
+  @include breakpoint(mobile) {
+    display: none;
+  }
+  .whoDiv {
+    @extend .sectionDiv;
+
+    h4 {
+      @extend .subTitleH4;
+    }
+
+    p {
+      @extend .subText;
+    }
+
+    //#whoDiv1, #whoDiv2 {
+    //  display: none;
+    //}
+  }
+}
+
+// Focus Section
+#focusSection {
+  @include breakpoint(mobile) {
+    height: 900px;
+  }
+
+  .focusDiv {
+    @include breakpoint(mobile) {
+      width: 30%;
+      display: block;
+      margin: 0 auto;
+    }
+    @extend .sectionDiv;
+  }
+
+  h4 {
+    @include breakpoint(mobile) {
+      font-family: $titleFontStack;
+      font-size: 0.7rem;
+      margin-top: 7px;
+    }
+    @extend .subTitleH4;
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+
+  p {
+    @include breakpoint(mobile) {
+      font-size: 0.75rem;
+      border-top: 1px dashed #000000;
+      margin-bottom: 40px;
+    }
+    @extend .subText;
+    margin-top: 5px;
+    padding-top: 5px;
+  }
+
+  //#focusDiv1, #focusDiv2, #focusDiv3 {
+  //  display: none;
+  //}
+  //
+  //#focusWrapper {
+  //  height: 250px;
+  //  display: none;
+  //}
+
+}
+
+// Skill Section
+#skillSection{
+  @include breakpoint(mobile) {
+    height: 630px;
+  }
+  #skillWrapper {
+    height: 250px;
+    //display: none;
+
+    .skillDiv {
+
+      @include breakpoint(mobile) {
+        margin: 0px auto;
+      }
+
+      display: inline-block;
+      margin: 30px auto;
+
+      .spinnerWrapper {
+        @include breakpoint(mobile) {
+          &:first-child {
+            display: none;
+          }
+          position: relative;
+          z-index: 0;
+        }
+        width: 130px;
+        display: inline-block;
+        height: 150px;
+
+        @include breakpoint(tabletPortrait) {
+          padding: 0px;
+        }
+
+        @include breakpoint(Landscape) {
+          padding: 10px;
+        }
+
+        h4 {
+          @extend .subTitleH4;
+          text-align: center;
+          margin-bottom: 0;
+          margin-top: 70px;
+        }
+
+        p {
+          font-size: 0.75rem;
+          text-align: center;
+        }
+
+        .number { // number is not shown because JS
+          margin-top: -120px;
+          position: relative;
+          z-index: 10;
+        }
+
+
+
+        .spinner {
+          width: 100px;
+          height: 100px;
+          background: #fff;
+          margin: 0 auto;
+          position: relative;
+          border-radius: 100%;
+
+
+          span {
+            width: 50%;
+            height: 100%;
+            overflow: hidden;
+            position: absolute;
+
+            span {
+              background: $black;
+              border-radius: 250px;
+              position: absolute;
+              width: 100%;
+              height: 100%;
+            }
+
+            &:first-child {
+              left: 0;
+
+              @include keyframes-transform(rotate-rt, rotate(0deg), rotate(180deg), rotate(180deg), rotate(180deg));
+              @include keyframes-transform(rotate-lt, rotate(0deg), rotate(0deg), rotate(125deg), rotate(125deg));
+              @include keyframes-transform(rotate-lt2, rotate(0deg), rotate(0deg), rotate(150deg), rotate(150deg));
+              @include keyframes-transform(rotate-lt3, rotate(0deg), rotate(0deg), rotate(110deg), rotate(110deg));
+              @include keyframes-transform(rotate-lt4, rotate(0deg), rotate(0deg), rotate(80deg), rotate(80deg));
+              @include keyframes-transform(rotate-lt5, rotate(0deg), rotate(0deg), rotate(95deg), rotate(95deg));
+
+              span.leftSpan {
+                left: 100%;
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+                -webkit-transform-origin: 0 50%;
+                -moz-transform-origin: 0 50%;
+                @include animation(rotate-lt, normal, 3s, 1, linear, forwards);
+              }
+
+            }
+
+            &:last-child {
+              left: 50%;
+
+              span.rightSpan {
+                left: -100%;
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+                -webkit-transform-origin: 100% 50%;
+                -moz-transform-origin: 100% 50%;
+                @include animation(rotate-rt, normal, 3s, 1, linear, forwards);
+              }
+            }
+
+            #spinner2 {
+              @include animation(rotate-lt2, normal, 3s, 1, linear, forwards);
+            }
+
+            #spinner3 {
+              @include animation(rotate-lt3, normal, 3s, 1, linear, forwards);
+
+            }
+
+            #spinner4 {
+              @include animation(rotate-lt4, normal, 3s, 1, linear, forwards);
+            }
+
+            #spinner5 {
+              @include animation(rotate-lt5, normal, 3s, 1, linear, forwards);
+            }
+
+          }
+        }
+
+        .spinnerTop {
+          width: 60px;
+          height: 60px;
+          background: #fff;
+          margin: 0 auto;
+          position: relative;
+          top: -80px;
+          border-radius: 100%;
+        }
+      } //end spinnerWrapper
+    } //end skillDiv
+  } //end skillWrapper
+}
+
+// Interest Section
+#interestSection {
+  @include breakpoint(mobile) {
+    display: none;
+  }
+  .interestDiv {
+    width: 73px;
+    display: inline-block;
+
+    padding-top: 30px;
+
+    @include breakpoint(tabletPortrait) {
+      margin: 0;
+    }
+
+    @include breakpoint(Landscape) {
+      margin: 0 20px;
+    }
+
+
+    p {
+      font-size: 0.75rem;
+      margin-top: -10px;
+      margin-left: -35px;
+      transform:rotate(-50deg);
+      width: 150px;
+    }
+
+    //#interestDiv1, #interestDiv2, #interestDiv3,
+    //#interestDiv4, #interestDiv5, #interestDiv6 {
+    //  display: none;
+    //}
+  }
+
+  //#interestWrapper {
+  //  height: 250px;
+  //  display: none;
+  //}
+}
+
+// Personality Section
+#personalitySection {
+  @include breakpoint(mobile) {
+    display: none;
+  }
+  .personDiv {
+    display: inline-block;
+
+    @include breakpoint(tabletPortrait) {
+      margin: -25px 0px;
+      padding: 0;
+    }
+
+    @include breakpoint(Landscape) {
+      margin: -25px 25px;
+    }
+
+
+    p {
+      font-size: 0.75rem;
+      display: inline;
+
+      &:nth-child(1) {
+        position: relative;
+        left: -138px;
+        top: 57px;
+      }
+
+      &:nth-child(2) {
+        position: relative;
+        left: -42px;
+        top: 94px;
+      }
+
+      &:nth-child(3) {
+        position: relative;
+        left: 30px;
+        top: 80px;
+      }
+
+      &:nth-child(4) {
+        position: relative;
+        left: 103px;
+        top: 18px;
+      }
+    } //end p
+
+    //#personDiv1 {
+    //  display: none;
+    //}
+    //
+    //#personDiv2 {
+    //  position: relative;
+    //  z-index: 0;
+    //  display: none;
+    //}
+
+  } // end .personDiv
+}
+
+// Contact Section
+#contactSection {
+  @include breakpoint(mobile) {
+    padding-bottom: 70px;
+  }
+  figure {
+    @include breakpoint(mobile) {
+      width: 172px;
+      padding: 0;
+      margin: 50px auto;
+    }
+    text-align: center;
+    margin: 0 auto;
+    background: $white;
+    padding-top: 150px;
+
+    .contactDiv {
+      @include breakpoint(mobile) {
+        display: inline;
+        padding: 0;
+      }
+      display: inline-block;
+      margin: 0 auto;
+      padding: 0 35px 0 35px;
+
+      img {
+        @include breakpoint(mobile) {
+          padding: 3px;
+        }
+        max-width: 65px;
+      }
+      //#twIcon, #fbIcon, #liIcon, #emIcon {
+      //  display: none;
+      //}
+    }
+
+  }
+
+}
+
+
+
+// Footer
+footer {
+
+  @include breakpoint(mobile) {
+    display: none !important;
+  }
+
+  width: 100%;
+  height: 36px;
+  background-color: $black;
+}

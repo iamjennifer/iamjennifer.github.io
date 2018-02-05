@@ -1,0 +1,63 @@
+/* ========== [Font] ========== */
+
+@include fontFace('sorts_mill_goudyitalic','../assets/font/GoudyStM-Italic-webfont', normal, normal);
+@include fontFace('sorts_mill_goudyregular','../assets/font/GoudyStM-webfont', normal, normal);
+@include fontFace('cantarellbold','../assets/font/Cantarell-Bold-webfont', normal, normal);
+@include fontFace('cantarellregular','../assets/font/Cantarell-Regular-webfont', normal, normal);
+
+html {
+  font-size: 100%;
+  font-family: $bodyFontStack;
+  color: $black;
+
+  section {
+
+    header {
+    text-align: center;
+    margin-top: 120px;
+
+      h2 {
+        font-family: $titleFontStack;
+        font-weight: bold;
+        font-size: 2.2rem;
+        letter-spacing: -0.0625rem; // -1px / 16
+        margin-top: -10px;
+        background-color: $white;
+      }
+
+      .secNum {
+        display: block;
+        font-size: 0.6rem;
+        background:$white url("../assets/images/png/circle.png") no-repeat center center;
+        color: $white;
+        height: 35px;
+        padding-top: 22px;
+      }
+
+      .subTitle {
+        font-family: $introFontStackRegular;
+        font-size: 0.8rem;
+        margin-top: -5px;
+        background-color: $white;
+      }
+
+    }
+
+    div.content {
+        text-align: center;
+        margin-top: 50px;
+        border: none;
+    }
+
+  } // closed - section/header
+
+  footer {
+    p {
+      color: $white;
+      padding-top: 10px;
+      font-size: 0.8rem;
+      text-align: center;
+    }
+  }
+} // closed - html
+

@@ -1,0 +1,231 @@
+/* ========== [Navigation] ========== */
+
+.page-wrap {
+  text-align: center;
+  height: 100%;
+  transition: height 0.3s ease;
+
+  .main-header {
+
+    @include breakpoint(mobile) {
+      position: fixed;
+      z-index: 100;
+    }
+
+    background-color: $black;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: all 0.3s ease;
+
+    .open-menu {
+      font-size: 0.8rem;
+    }
+
+    .close-menu {
+      font-size: 0.8rem;
+      display: none;
+    }
+
+    .open-menu img,
+    .close-menu img  {
+      position: relative;
+      top: 13px;
+    }
+  }
+}
+
+.main-nav {
+  @include breakpoint(mobile) {
+    position: fixed;
+    z-index: 101;
+  }
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: $black;
+  overflow-y: auto;
+  transition: height 0.3s ease;
+
+  #mainNavBox {
+    text-align: center;
+    font-size: 0.7rem;
+  }
+
+  a {
+
+    @include breakpoint(mobile) {
+      display: inline-block;
+      color: $white;
+      margin: 40px auto;
+      padding: 10px;
+
+      &:first-child, &:nth-child(2),
+      &:nth-child(6), &:nth-child(7) {
+        display: none;
+      }
+    }
+
+    @include breakpoint(tabletPortrait) {
+      margin-right: 1rem;
+    }
+
+    display: inline-block;
+    background: $black;
+    color: $white;
+    margin-right: 3rem;
+    margin-top: 28px;
+
+
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    span {
+
+      @include breakpoint(mobile) {
+        padding-top: 25px;
+      }
+
+      display: inline;
+      text-align: center;
+
+    }
+
+    #span3, #span4, #span5, #span8 {
+      @include breakpoint(mobile) {
+        background: url("../assets/images/png/mainNavIcon_mobile.png") no-repeat center 0;
+        height: 25px;
+      }
+    }
+
+    #span4 {
+      @include breakpoint(mobile) {
+        background-position: center -51px;
+      }
+    }
+
+    #span5 {
+      @include breakpoint(mobile) {
+        background-position: center -101px;
+      }
+    }
+
+    #span8 {
+      @include breakpoint(mobile) {
+        background-position: center -151px;
+      }
+    }
+
+    .topSpan {
+      @include breakpoint(mobile) {
+        display: none !important;
+      }
+
+      font-size: 0.7rem;
+    }
+  }
+
+  h5 {
+    display: none;
+  }
+}
+
+#main-nav {
+  &:target {
+
+    @include breakpoint(mobile) {
+      height: 10%;
+    }
+
+    height: 8%;
+
+    & + .page-wrap .open-menu {
+      display: none;
+    }
+
+    & + .page-wrap .close-menu {
+      display: block;
+    }
+
+    & + .page-wrap .main-header {
+      @include breakpoint(mobile) {
+        top: 10%;
+      }
+      top: 8%;
+    }
+
+  }
+}
+
+
+
+
+
+
+
+/* Side navigation 需要配合ＪＳ*/
+#sideNav {
+  @include breakpoint(mobile) {
+    display: none !important;
+  }
+  width: 20px;
+  height: 25px;
+  background-color: $black;
+  //display: none;
+  position: fixed;
+  left: 0;
+  top: 200px;
+  font-size: 1em;
+  padding-left: 30px;
+  color: $black;
+  cursor: pointer;
+
+  #expList {
+
+    li {
+      background-position: 1px 8px;
+      background-repeat: no-repeat;
+    }
+
+    a {
+      color: $black;
+      font-size: 0.7rem;
+      padding-top: 8px;
+    }
+    // Collapsed state for list element
+    .collapsed {
+      background-image: url('../assets/images/png/collapsed.png');
+    }
+    // Expanded state for list element
+    // NOTE: This class must be located UNDER the collapsed one
+    .expanded {
+      background-image: url(../assets/images/png/expanded.png);
+    }
+  }
+
+  h5 {
+    display: none;
+  }
+}
+
+/* Btn nav - go to top btn*/
+#upBtn {
+
+  @include breakpoint(mobile) {
+    display: none !important;
+  }
+  //display: none;
+  position: fixed;
+  right: 3rem;
+  bottom: 50px;
+
+  h5 {
+    display: none;
+  }
+}

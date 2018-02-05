@@ -1,0 +1,77 @@
+/* ========== [ResetCSS] ========== */
+body, html, div, blockquote, img, label, p, h1, h2, h3, h4, h5, h6, pre, ul, ol, li, dl, dt, dd, form, a, fieldset, input, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  vertical-align:baseline;
+  font: inherit;
+}
+
+// To secure correct behavior in older browsers
+header, section, footer, aside, nav, main, article, figure {
+  display: block;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content:"";
+  display: table;
+}
+
+.clearfix:after {
+  clear:both;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin-top: 0;
+}
+
+fieldset, img {
+  border: 0;
+}
+
+legend {
+  color: #000;
+}
+
+li {
+  list-style: none;
+}
+
+sup {
+  vertical-align: text-top;
+}
+
+sub {
+  vertical-align: text-bottom;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  vertical-align: top;
+  font-weight: normal;
+}
+
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+}
+
+a img {
+  border: none;
+}
+
+img {
+  image-rendering: -webkit-optimize-contrast;
+  max-width: 100%;
+}
+
+// for removing the outline in chrome
+*:focus {
+  outline: 0;
+}

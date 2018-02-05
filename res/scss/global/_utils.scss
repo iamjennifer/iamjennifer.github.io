@@ -1,0 +1,127 @@
+/* ========== [Utils] ========== */
+
+//color
+$black: #000000;
+$white: #ffffff;
+
+//font
+$bodyFontStack: 'cantarellregular', Arial, Helvetica , san-serif;
+$titleFontStack: 'cantarellbold', Arial, Helvetica , san-serif;
+$introFontStackRegular:'sorts_mill_goudyregular', serif;
+$introFontStackItalic:'sorts_mill_goudyitalic', serif;
+
+//prefix
+$wk: -webkit-;
+
+
+// mixin - font
+@mixin fontFace($family, $src, $weight: normal, $style: normal) {
+
+  @font-face {
+    font-family: $family;
+    src: url('#{$src}.eot'); // IE9 compat
+    src: url('#{$src}.eot?#iefix') format('embedded-opentype'), // IE8 and below
+    url('#{$src}.woff') format('woff'), // standards
+    url('#{$src}.ttf') format('truetype'), // Safari, Android, iOS
+    url('#{$src}.svg##{$family}') format('svg'); // legacy iOS
+    font-style: $style;
+    font-weight: $weight;
+  }
+
+}
+
+// mixin - animation
+@mixin keyframes($animationName) {
+  @-webkit-keyframes #{$animationName} {
+    @content;
+  }
+  @-moz-keyframes #{$animationName} {
+    @content;
+  }
+  @keyframes #{$animationName} {
+    @content;
+  }
+}
+
+@mixin keyframes-transform($name, $transform1, $transform2, $transform3, $transform4) {
+  @-webkit-keyframes #{$name} {
+    0% { -webkit-transform: $transform1; }
+    25% { -webkit-transform: $transform2; }
+    100% { -webkit-transform: $transform3; }
+    100% { -webkit-transform: $transform4; }
+  }
+  @keyframes #{$name} {
+    0% { transform: $transform1; }
+    25% { transform: $transform2; }
+    50% { transform: $transform3; }
+    100% { transform: $transform4; }
+  }
+}
+
+@mixin animation($animationName, $direction: normal, $duration: 2s, $iteration: infinite, $timing:ease-in-out, $fillMode:forward) {
+
+  -webkit-animation-name: #{$animationName};
+  -webkit-animation-direction: $direction;
+  -webkit-animation-duration: $duration;
+  -webkit-animation-iteration-count: $iteration;
+  -webkit-animation-timing-function: $timing;
+  -webkit-animation-fill-mode:$fillMode;
+
+  -moz-animation-name: #{$animationName};
+  -moz-animation-direction: $direction;
+  -moz-animation-duration: $duration;
+  -moz-animation-iteration-count: $iteration;
+  -moz-animation-timing-function: $timing;
+  -moz-animation-fill-mode:$fillMode;
+
+  animation-name: #{$animationName};
+  animation-direction: $direction;
+  animation-duration: $duration;
+  animation-iteration-count: $iteration;
+  animation-timing-function: $timing;
+  animation-fill-mode:$fillMode;
+
+}
+
+@mixin transition($property: all, $duration: 1s, $timing:ease-in-out){
+
+  -webkit-transition: $property $duration $timing;
+  -moz-transition: $property $duration $timing;
+  transition: $property $duration $timing;
+
+}
+
+// mixin - break point
+@mixin breakpoint($point) {
+  @if $point == landscape {
+    @media (min-width: 60em) { @content ; }
+  }
+  @else if $point == tabletPortrait {
+    @media (min-width: 37.5em)  { @content ; }
+  }
+  @else if $point == mobile {
+    @media (max-width: 36em)  { @content ; }
+  }
+}
+
+// Reusable CSS
+.sectionDiv {
+  width: 148px;
+  margin: 0 auto;
+  display: inline-block;
+  padding: 0 20px 0 20px;
+}
+
+.subTitleH4 {
+  font-family: $titleFontStack;
+  font-size: 0.7rem;
+  letter-spacing: -1px;
+  margin-bottom: 20px;
+}
+
+.subText {
+  font-size: 0.75rem;
+  border-top: 1px dashed $black;
+  margin-top: 15px;
+  padding-top: 15px;
+}

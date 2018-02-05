@@ -1,4 +1,838 @@
-body {
-  background-color: #337ab7; }
+@charset "UTF-8";
+/*
+	Project Name :: /i.am.jennifer/ Online Portfolio
+	Site :: iamjennifer.com
+	----------------------------------------------------------
+	Created by Jennifer howe on 02/01/18.
+    Copyright (c) 2018 jennifer howe. All rights reserved.
+ */
+/* ========== [ResetCSS] ========== */
+body, html, div, blockquote, img, label, p, h1, h2, h3, h4, h5, h6, pre, ul, ol, li, dl, dt, dd, form, a, fieldset, input, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  vertical-align: baseline;
+  font: inherit; }
+
+header, section, footer, aside, nav, main, article, figure {
+  display: block; }
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table; }
+
+.clearfix:after {
+  clear: both; }
+
+h1, h2, h3, h4, h5, h6, p {
+  margin-top: 0; }
+
+fieldset, img {
+  border: 0; }
+
+legend {
+  color: #000; }
+
+li {
+  list-style: none; }
+
+sup {
+  vertical-align: text-top; }
+
+sub {
+  vertical-align: text-bottom; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+caption, th, td {
+  text-align: left;
+  vertical-align: top;
+  font-weight: normal; }
+
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none; }
+
+a img {
+  border: none; }
+
+img {
+  image-rendering: -webkit-optimize-contrast;
+  max-width: 100%; }
+
+*:focus {
+  outline: 0; }
+
+/* ========== [Utils] ========== */
+.sectionDiv, #whoSection .whoDiv, #focusSection .focusDiv {
+  width: 148px;
+  margin: 0 auto;
+  display: inline-block;
+  padding: 0 20px 0 20px; }
+
+.subTitleH4, #whoSection .whoDiv h4, #focusSection h4, #skillSection #skillWrapper .skillDiv .spinnerWrapper h4 {
+  font-family: "cantarellbold", Arial, Helvetica, san-serif;
+  font-size: 0.7rem;
+  letter-spacing: -1px;
+  margin-bottom: 20px; }
+
+.subText, #whoSection .whoDiv p, #focusSection p {
+  font-size: 0.75rem;
+  border-top: 1px dashed #000000;
+  margin-top: 15px;
+  padding-top: 15px; }
+
+/* ========== [Font] ========== */
+@font-face {
+  font-family: "sorts_mill_goudyitalic";
+  src: url("../assets/font/GoudyStM-Italic-webfont.eot");
+  src: url("../assets/font/GoudyStM-Italic-webfont.eot?#iefix") format("embedded-opentype"), url("../assets/font/GoudyStM-Italic-webfont.woff") format("woff"), url("../assets/font/GoudyStM-Italic-webfont.ttf") format("truetype"), url("../assets/font/GoudyStM-Italic-webfont.svg#sorts_mill_goudyitalic") format("svg");
+  font-style: normal;
+  font-weight: normal; }
+@font-face {
+  font-family: "sorts_mill_goudyregular";
+  src: url("../assets/font/GoudyStM-webfont.eot");
+  src: url("../assets/font/GoudyStM-webfont.eot?#iefix") format("embedded-opentype"), url("../assets/font/GoudyStM-webfont.woff") format("woff"), url("../assets/font/GoudyStM-webfont.ttf") format("truetype"), url("../assets/font/GoudyStM-webfont.svg#sorts_mill_goudyregular") format("svg");
+  font-style: normal;
+  font-weight: normal; }
+@font-face {
+  font-family: "cantarellbold";
+  src: url("../assets/font/Cantarell-Bold-webfont.eot");
+  src: url("../assets/font/Cantarell-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("../assets/font/Cantarell-Bold-webfont.woff") format("woff"), url("../assets/font/Cantarell-Bold-webfont.ttf") format("truetype"), url("../assets/font/Cantarell-Bold-webfont.svg#cantarellbold") format("svg");
+  font-style: normal;
+  font-weight: normal; }
+@font-face {
+  font-family: "cantarellregular";
+  src: url("../assets/font/Cantarell-Regular-webfont.eot");
+  src: url("../assets/font/Cantarell-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../assets/font/Cantarell-Regular-webfont.woff") format("woff"), url("../assets/font/Cantarell-Regular-webfont.ttf") format("truetype"), url("../assets/font/Cantarell-Regular-webfont.svg#cantarellregular") format("svg");
+  font-style: normal;
+  font-weight: normal; }
+html {
+  font-size: 100%;
+  font-family: "cantarellregular", Arial, Helvetica, san-serif;
+  color: #000000; }
+  html section header {
+    text-align: center;
+    margin-top: 120px; }
+    html section header h2 {
+      font-family: "cantarellbold", Arial, Helvetica, san-serif;
+      font-weight: bold;
+      font-size: 2.2rem;
+      letter-spacing: -0.0625rem;
+      margin-top: -10px;
+      background-color: #ffffff; }
+    html section header .secNum {
+      display: block;
+      font-size: 0.6rem;
+      background: #ffffff url("../assets/images/png/circle.png") no-repeat center center;
+      color: #ffffff;
+      height: 35px;
+      padding-top: 22px; }
+    html section header .subTitle {
+      font-family: "sorts_mill_goudyregular", serif;
+      font-size: 0.8rem;
+      margin-top: -5px;
+      background-color: #ffffff; }
+  html section div.content {
+    text-align: center;
+    margin-top: 50px;
+    border: none; }
+  html footer p {
+    color: #ffffff;
+    padding-top: 10px;
+    font-size: 0.8rem;
+    text-align: center; }
+
+/* ========== [Navigation] ========== */
+.page-wrap {
+  text-align: center;
+  height: 100%;
+  transition: height 0.3s ease; }
+  .page-wrap .main-header {
+    background-color: #000000;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: all 0.3s ease; }
+    @media (max-width: 36em) {
+      .page-wrap .main-header {
+        position: fixed;
+        z-index: 100; } }
+    .page-wrap .main-header .open-menu {
+      font-size: 0.8rem; }
+    .page-wrap .main-header .close-menu {
+      font-size: 0.8rem;
+      display: none; }
+    .page-wrap .main-header .open-menu img,
+    .page-wrap .main-header .close-menu img {
+      position: relative;
+      top: 13px; }
+
+.main-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: #000000;
+  overflow-y: auto;
+  transition: height 0.3s ease; }
+  @media (max-width: 36em) {
+    .main-nav {
+      position: fixed;
+      z-index: 101; } }
+  .main-nav #mainNavBox {
+    text-align: center;
+    font-size: 0.7rem; }
+  .main-nav a {
+    display: inline-block;
+    background: #000000;
+    color: #ffffff;
+    margin-right: 3rem;
+    margin-top: 28px; }
+    @media (max-width: 36em) {
+      .main-nav a {
+        display: inline-block;
+        color: #ffffff;
+        margin: 40px auto;
+        padding: 10px; }
+        .main-nav a:first-child, .main-nav a:nth-child(2), .main-nav a:nth-child(6), .main-nav a:nth-child(7) {
+          display: none; } }
+    @media (min-width: 37.5em) {
+      .main-nav a {
+        margin-right: 1rem; } }
+    .main-nav a:last-child {
+      margin-right: 0; }
+    .main-nav a span {
+      display: inline;
+      text-align: center; }
+      @media (max-width: 36em) {
+        .main-nav a span {
+          padding-top: 25px; } }
+    @media (max-width: 36em) {
+      .main-nav a #span3, .main-nav a #span4, .main-nav a #span5, .main-nav a #span8 {
+        background: url("../assets/images/png/mainNavIcon_mobile.png") no-repeat center 0;
+        height: 25px; } }
+    @media (max-width: 36em) {
+      .main-nav a #span4 {
+        background-position: center -51px; } }
+    @media (max-width: 36em) {
+      .main-nav a #span5 {
+        background-position: center -101px; } }
+    @media (max-width: 36em) {
+      .main-nav a #span8 {
+        background-position: center -151px; } }
+    .main-nav a .topSpan {
+      font-size: 0.7rem; }
+      @media (max-width: 36em) {
+        .main-nav a .topSpan {
+          display: none !important; } }
+  .main-nav h5 {
+    display: none; }
+
+#main-nav:target {
+  height: 8%; }
+  @media (max-width: 36em) {
+    #main-nav:target {
+      height: 10%; } }
+  #main-nav:target + .page-wrap .open-menu {
+    display: none; }
+  #main-nav:target + .page-wrap .close-menu {
+    display: block; }
+  #main-nav:target + .page-wrap .main-header {
+    top: 8%; }
+    @media (max-width: 36em) {
+      #main-nav:target + .page-wrap .main-header {
+        top: 10%; } }
+
+/* Side navigation 需要配合ＪＳ*/
+#sideNav {
+  width: 20px;
+  height: 25px;
+  background-color: #000000;
+  position: fixed;
+  left: 0;
+  top: 200px;
+  font-size: 1em;
+  padding-left: 30px;
+  color: #000000;
+  cursor: pointer; }
+  @media (max-width: 36em) {
+    #sideNav {
+      display: none !important; } }
+  #sideNav #expList li {
+    background-position: 1px 8px;
+    background-repeat: no-repeat; }
+  #sideNav #expList a {
+    color: #000000;
+    font-size: 0.7rem;
+    padding-top: 8px; }
+  #sideNav #expList .collapsed {
+    background-image: url("../assets/images/png/collapsed.png"); }
+  #sideNav #expList .expanded {
+    background-image: url(../assets/images/png/expanded.png); }
+  #sideNav h5 {
+    display: none; }
+
+/* Btn nav - go to top btn*/
+#upBtn {
+  position: fixed;
+  right: 3rem;
+  bottom: 50px; }
+  @media (max-width: 36em) {
+    #upBtn {
+      display: none !important; } }
+  #upBtn h5 {
+    display: none; }
+
+/* ========== [Layout] ========== */
+@media (max-width: 36em) {
+  #wrapper {
+    width: 90%;
+    margin: 0 auto;
+    min-width: 320px;
+    max-width: 480px; } }
+@media (min-width: 37.5em) {
+  #wrapper {
+    width: 90%;
+    margin: 0 auto;
+    min-width: 500px;
+    max-width: 768px; } }
+@media (min-width: 60em) {
+  #wrapper {
+    min-width: 1024px;
+    max-width: 1280px; } }
+
+section {
+  width: 100%;
+  height: 760px;
+  border: 1px solid #ffffff; }
+  @media (max-width: 36em) {
+    section {
+      width: 100%;
+      height: 100%; } }
+  section .content .connectLine {
+    margin-top: 50px; }
+    @media (max-width: 36em) {
+      section .content .connectLine {
+        display: none; } }
+    section .content .connectLine hr {
+      width: 1px;
+      height: 360px;
+      border: none;
+      border-right: 1px dashed #000000; }
+
+#introSection h2 {
+  display: none; }
+#introSection .introDiv {
+  margin-top: 348px;
+  margin-left: 6.5%; }
+  @media (max-width: 36em) {
+    #introSection .introDiv {
+      margin-top: 190px;
+      margin-left: 20px;
+      height: 290px; } }
+  #introSection .introDiv #desktopLogo {
+    min-width: 125px; }
+    @media (max-width: 36em) {
+      #introSection .introDiv #desktopLogo {
+        display: none; } }
+  #introSection .introDiv #mobileLogo {
+    display: none; }
+    @media (max-width: 36em) {
+      #introSection .introDiv #mobileLogo {
+        display: block; } }
+  #introSection .introDiv P {
+    font-family: "sorts_mill_goudyregular", serif;
+    width: 407px; }
+    @media (max-width: 36em) {
+      #introSection .introDiv P {
+        padding-top: 30px;
+        width: 200px; } }
+  #introSection .introDiv .italicFont {
+    font-family: "sorts_mill_goudyitalic", serif;
+    font-weight: 700;
+    letter-spacing: 0.02rem;
+    font-size: 0.9rem; }
+  #introSection .introDiv #pageOneCircle {
+    margin-top: -18px;
+    margin-left: 175px; }
+    @media (max-width: 36em) {
+      #introSection .introDiv #pageOneCircle {
+        display: none; } }
+    @media (min-width: 37.5em) {
+      #introSection .introDiv #pageOneCircle {
+        display: none; } }
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0.5; }
+  100% {
+    opacity: 1; } }
+@-moz-keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0.5; }
+  100% {
+    opacity: 1; } }
+@keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0.5; }
+  100% {
+    opacity: 1; } }
+    #introSection .introDiv #pageOneCircle .objblink {
+      -webkit-transition: all 1s ease-in-out 1s ease-in-out;
+      -moz-transition: all 1s ease-in-out 1s ease-in-out;
+      transition: all 1s ease-in-out 1s ease-in-out;
+      -webkit-animation-name: blink;
+      -webkit-animation-direction: normal;
+      -webkit-animation-duration: 2s;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-timing-function: ease-in-out;
+      -webkit-animation-fill-mode: forward;
+      -moz-animation-name: blink;
+      -moz-animation-direction: normal;
+      -moz-animation-duration: 2s;
+      -moz-animation-iteration-count: infinite;
+      -moz-animation-timing-function: ease-in-out;
+      -moz-animation-fill-mode: forward;
+      animation-name: blink;
+      animation-direction: normal;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forward; }
+    #introSection .introDiv #pageOneCircle #pageOneCircleInside {
+      border-bottom: 1px dashed #000000;
+      border-left: 1px dashed #000000;
+      margin-top: 5px;
+      margin-left: 9px;
+      width: 0;
+      height: 0;
+      position: relative; }
+    #introSection .introDiv #pageOneCircle #cover {
+      width: 8px;
+      height: 2px;
+      background-color: #ffffff;
+      position: absolute;
+      margin-left: 5px;
+      margin-top: -1px;
+      z-index: 10; }
+
+@media (max-width: 36em) {
+  #whoSection {
+    display: none; } }
+
+@media (max-width: 36em) {
+  #focusSection {
+    height: 900px; } }
+@media (max-width: 36em) {
+  #focusSection .focusDiv {
+    width: 30%;
+    display: block;
+    margin: 0 auto; } }
+#focusSection h4 {
+  margin-top: 10px;
+  margin-bottom: 0; }
+  @media (max-width: 36em) {
+    #focusSection h4 {
+      font-family: "cantarellbold", Arial, Helvetica, san-serif;
+      font-size: 0.7rem;
+      margin-top: 7px; } }
+#focusSection p {
+  margin-top: 5px;
+  padding-top: 5px; }
+  @media (max-width: 36em) {
+    #focusSection p {
+      font-size: 0.75rem;
+      border-top: 1px dashed #000000;
+      margin-bottom: 40px; } }
+
+@media (max-width: 36em) {
+  #skillSection {
+    height: 630px; } }
+#skillSection #skillWrapper {
+  height: 250px; }
+  #skillSection #skillWrapper .skillDiv {
+    display: inline-block;
+    margin: 30px auto; }
+    @media (max-width: 36em) {
+      #skillSection #skillWrapper .skillDiv {
+        margin: 0px auto; } }
+    #skillSection #skillWrapper .skillDiv .spinnerWrapper {
+      width: 130px;
+      display: inline-block;
+      height: 150px; }
+      @media (max-width: 36em) {
+        #skillSection #skillWrapper .skillDiv .spinnerWrapper {
+          position: relative;
+          z-index: 0; }
+          #skillSection #skillWrapper .skillDiv .spinnerWrapper:first-child {
+            display: none; } }
+      @media (min-width: 37.5em) {
+        #skillSection #skillWrapper .skillDiv .spinnerWrapper {
+          padding: 0px; } }
+      #skillSection #skillWrapper .skillDiv .spinnerWrapper h4 {
+        text-align: center;
+        margin-bottom: 0;
+        margin-top: 70px; }
+      #skillSection #skillWrapper .skillDiv .spinnerWrapper p {
+        font-size: 0.75rem;
+        text-align: center; }
+      #skillSection #skillWrapper .skillDiv .spinnerWrapper .number {
+        margin-top: -120px;
+        position: relative;
+        z-index: 10; }
+      #skillSection #skillWrapper .skillDiv .spinnerWrapper .spinner {
+        width: 100px;
+        height: 100px;
+        background: #fff;
+        margin: 0 auto;
+        position: relative;
+        border-radius: 100%; }
+        #skillSection #skillWrapper .skillDiv .spinnerWrapper .spinner span {
+          width: 50%;
+          height: 100%;
+          overflow: hidden;
+          position: absolute; }
+          #skillSection #skillWrapper .skillDiv .spinnerWrapper .spinner span span {
+            background: #000000;
+            border-radius: 250px;
+            position: absolute;
+            width: 100%;
+            height: 100%; }
+          #skillSection #skillWrapper .skillDiv .spinnerWrapper .spinner span:first-child {
+            left: 0; }
+@-webkit-keyframes rotate-rt {
+  0% {
+    -webkit-transform: rotate(0deg); }
+  25% {
+    -webkit-transform: rotate(180deg); }
+  100% {
+    -webkit-transform: rotate(180deg); }
+  100% {
+    -webkit-transform: rotate(180deg); } }
+@keyframes rotate-rt {
+  0% {
+    transform: rotate(0deg); }
+  25% {
+    transform: rotate(180deg); }
+  50% {
+    transform: rotate(180deg); }
+  100% {
+    transform: rotate(180deg); } }
+@-webkit-keyframes rotate-lt {
+  0% {
+    -webkit-transform: rotate(0deg); }
+  25% {
+    -webkit-transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(125deg); }
+  100% {
+    -webkit-transform: rotate(125deg); } }
+@keyframes rotate-lt {
+  0% {
+    transform: rotate(0deg); }
+  25% {
+    transform: rotate(0deg); }
+  50% {
+    transform: rotate(125deg); }
+  100% {
+    transform: rotate(125deg); } }
+@-webkit-keyframes rotate-lt2 {
+  0% {
+    -webkit-transform: rotate(0deg); }
+  25% {
+    -webkit-transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(150deg); }
+  100% {
+    -webkit-transform: rotate(150deg); } }
+@keyframes rotate-lt2 {
+  0% {
+    transform: rotate(0deg); }
+  25% {
+    transform: rotate(0deg); }
+  50% {
+    transform: rotate(150deg); }
+  100% {
+    transform: rotate(150deg); } }
+@-webkit-keyframes rotate-lt3 {
+  0% {
+    -webkit-transform: rotate(0deg); }
+  25% {
+    -webkit-transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(110deg); }
+  100% {
+    -webkit-transform: rotate(110deg); } }
+@keyframes rotate-lt3 {
+  0% {
+    transform: rotate(0deg); }
+  25% {
+    transform: rotate(0deg); }
+  50% {
+    transform: rotate(110deg); }
+  100% {
+    transform: rotate(110deg); } }
+@-webkit-keyframes rotate-lt4 {
+  0% {
+    -webkit-transform: rotate(0deg); }
+  25% {
+    -webkit-transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(80deg); }
+  100% {
+    -webkit-transform: rotate(80deg); } }
+@keyframes rotate-lt4 {
+  0% {
+    transform: rotate(0deg); }
+  25% {
+    transform: rotate(0deg); }
+  50% {
+    transform: rotate(80deg); }
+  100% {
+    transform: rotate(80deg); } }
+@-webkit-keyframes rotate-lt5 {
+  0% {
+    -webkit-transform: rotate(0deg); }
+  25% {
+    -webkit-transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(95deg); }
+  100% {
+    -webkit-transform: rotate(95deg); } }
+@keyframes rotate-lt5 {
+  0% {
+    transform: rotate(0deg); }
+  25% {
+    transform: rotate(0deg); }
+  50% {
+    transform: rotate(95deg); }
+  100% {
+    transform: rotate(95deg); } }
+            #skillSection #skillWrapper .skillDiv .spinnerWrapper .spinner span:first-child span.leftSpan {
+              left: 100%;
+              border-top-left-radius: 0;
+              border-bottom-left-radius: 0;
+              -webkit-transform-origin: 0 50%;
+              -moz-transform-origin: 0 50%;
+              -webkit-animation-name: rotate-lt;
+              -webkit-animation-direction: normal;
+              -webkit-animation-duration: 3s;
+              -webkit-animation-iteration-count: 1;
+              -webkit-animation-timing-function: linear;
+              -webkit-animation-fill-mode: forwards;
+              -moz-animation-name: rotate-lt;
+              -moz-animation-direction: normal;
+              -moz-animation-duration: 3s;
+              -moz-animation-iteration-count: 1;
+              -moz-animation-timing-function: linear;
+              -moz-animation-fill-mode: forwards;
+              animation-name: rotate-lt;
+              animation-direction: normal;
+              animation-duration: 3s;
+              animation-iteration-count: 1;
+              animation-timing-function: linear;
+              animation-fill-mode: forwards; }
+          #skillSection #skillWrapper .skillDiv .spinnerWrapper .spinner span:last-child {
+            left: 50%; }
+            #skillSection #skillWrapper .skillDiv .spinnerWrapper .spinner span:last-child span.rightSpan {
+              left: -100%;
+              border-top-right-radius: 0;
+              border-bottom-right-radius: 0;
+              -webkit-transform-origin: 100% 50%;
+              -moz-transform-origin: 100% 50%;
+              -webkit-animation-name: rotate-rt;
+              -webkit-animation-direction: normal;
+              -webkit-animation-duration: 3s;
+              -webkit-animation-iteration-count: 1;
+              -webkit-animation-timing-function: linear;
+              -webkit-animation-fill-mode: forwards;
+              -moz-animation-name: rotate-rt;
+              -moz-animation-direction: normal;
+              -moz-animation-duration: 3s;
+              -moz-animation-iteration-count: 1;
+              -moz-animation-timing-function: linear;
+              -moz-animation-fill-mode: forwards;
+              animation-name: rotate-rt;
+              animation-direction: normal;
+              animation-duration: 3s;
+              animation-iteration-count: 1;
+              animation-timing-function: linear;
+              animation-fill-mode: forwards; }
+          #skillSection #skillWrapper .skillDiv .spinnerWrapper .spinner span #spinner2 {
+            -webkit-animation-name: rotate-lt2;
+            -webkit-animation-direction: normal;
+            -webkit-animation-duration: 3s;
+            -webkit-animation-iteration-count: 1;
+            -webkit-animation-timing-function: linear;
+            -webkit-animation-fill-mode: forwards;
+            -moz-animation-name: rotate-lt2;
+            -moz-animation-direction: normal;
+            -moz-animation-duration: 3s;
+            -moz-animation-iteration-count: 1;
+            -moz-animation-timing-function: linear;
+            -moz-animation-fill-mode: forwards;
+            animation-name: rotate-lt2;
+            animation-direction: normal;
+            animation-duration: 3s;
+            animation-iteration-count: 1;
+            animation-timing-function: linear;
+            animation-fill-mode: forwards; }
+          #skillSection #skillWrapper .skillDiv .spinnerWrapper .spinner span #spinner3 {
+            -webkit-animation-name: rotate-lt3;
+            -webkit-animation-direction: normal;
+            -webkit-animation-duration: 3s;
+            -webkit-animation-iteration-count: 1;
+            -webkit-animation-timing-function: linear;
+            -webkit-animation-fill-mode: forwards;
+            -moz-animation-name: rotate-lt3;
+            -moz-animation-direction: normal;
+            -moz-animation-duration: 3s;
+            -moz-animation-iteration-count: 1;
+            -moz-animation-timing-function: linear;
+            -moz-animation-fill-mode: forwards;
+            animation-name: rotate-lt3;
+            animation-direction: normal;
+            animation-duration: 3s;
+            animation-iteration-count: 1;
+            animation-timing-function: linear;
+            animation-fill-mode: forwards; }
+          #skillSection #skillWrapper .skillDiv .spinnerWrapper .spinner span #spinner4 {
+            -webkit-animation-name: rotate-lt4;
+            -webkit-animation-direction: normal;
+            -webkit-animation-duration: 3s;
+            -webkit-animation-iteration-count: 1;
+            -webkit-animation-timing-function: linear;
+            -webkit-animation-fill-mode: forwards;
+            -moz-animation-name: rotate-lt4;
+            -moz-animation-direction: normal;
+            -moz-animation-duration: 3s;
+            -moz-animation-iteration-count: 1;
+            -moz-animation-timing-function: linear;
+            -moz-animation-fill-mode: forwards;
+            animation-name: rotate-lt4;
+            animation-direction: normal;
+            animation-duration: 3s;
+            animation-iteration-count: 1;
+            animation-timing-function: linear;
+            animation-fill-mode: forwards; }
+          #skillSection #skillWrapper .skillDiv .spinnerWrapper .spinner span #spinner5 {
+            -webkit-animation-name: rotate-lt5;
+            -webkit-animation-direction: normal;
+            -webkit-animation-duration: 3s;
+            -webkit-animation-iteration-count: 1;
+            -webkit-animation-timing-function: linear;
+            -webkit-animation-fill-mode: forwards;
+            -moz-animation-name: rotate-lt5;
+            -moz-animation-direction: normal;
+            -moz-animation-duration: 3s;
+            -moz-animation-iteration-count: 1;
+            -moz-animation-timing-function: linear;
+            -moz-animation-fill-mode: forwards;
+            animation-name: rotate-lt5;
+            animation-direction: normal;
+            animation-duration: 3s;
+            animation-iteration-count: 1;
+            animation-timing-function: linear;
+            animation-fill-mode: forwards; }
+      #skillSection #skillWrapper .skillDiv .spinnerWrapper .spinnerTop {
+        width: 60px;
+        height: 60px;
+        background: #fff;
+        margin: 0 auto;
+        position: relative;
+        top: -80px;
+        border-radius: 100%; }
+
+@media (max-width: 36em) {
+  #interestSection {
+    display: none; } }
+#interestSection .interestDiv {
+  width: 73px;
+  display: inline-block;
+  padding-top: 30px; }
+  @media (min-width: 37.5em) {
+    #interestSection .interestDiv {
+      margin: 0; } }
+  #interestSection .interestDiv p {
+    font-size: 0.75rem;
+    margin-top: -10px;
+    margin-left: -35px;
+    transform: rotate(-50deg);
+    width: 150px; }
+
+@media (max-width: 36em) {
+  #personalitySection {
+    display: none; } }
+#personalitySection .personDiv {
+  display: inline-block; }
+  @media (min-width: 37.5em) {
+    #personalitySection .personDiv {
+      margin: -25px 0px;
+      padding: 0; } }
+  #personalitySection .personDiv p {
+    font-size: 0.75rem;
+    display: inline; }
+    #personalitySection .personDiv p:nth-child(1) {
+      position: relative;
+      left: -138px;
+      top: 57px; }
+    #personalitySection .personDiv p:nth-child(2) {
+      position: relative;
+      left: -42px;
+      top: 94px; }
+    #personalitySection .personDiv p:nth-child(3) {
+      position: relative;
+      left: 30px;
+      top: 80px; }
+    #personalitySection .personDiv p:nth-child(4) {
+      position: relative;
+      left: 103px;
+      top: 18px; }
+
+@media (max-width: 36em) {
+  #contactSection {
+    padding-bottom: 70px; } }
+#contactSection figure {
+  text-align: center;
+  margin: 0 auto;
+  background: #ffffff;
+  padding-top: 150px; }
+  @media (max-width: 36em) {
+    #contactSection figure {
+      width: 172px;
+      padding: 0;
+      margin: 50px auto; } }
+  #contactSection figure .contactDiv {
+    display: inline-block;
+    margin: 0 auto;
+    padding: 0 35px 0 35px; }
+    @media (max-width: 36em) {
+      #contactSection figure .contactDiv {
+        display: inline;
+        padding: 0; } }
+    #contactSection figure .contactDiv img {
+      max-width: 65px; }
+      @media (max-width: 36em) {
+        #contactSection figure .contactDiv img {
+          padding: 3px; } }
+
+footer {
+  width: 100%;
+  height: 36px;
+  background-color: #000000; }
+  @media (max-width: 36em) {
+    footer {
+      display: none !important; } }
 
 /*# sourceMappingURL=main.css.map */
