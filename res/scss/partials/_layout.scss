@@ -17,7 +17,7 @@
     max-width: 768px;
   }
 
-  @include breakpoint(landscape) {
+  @include breakpoint(tabletLandscape) {
      min-width: 1024px;
      max-width: 1280px;
    }
@@ -70,19 +70,24 @@ section {
     margin-top: 348px;
     margin-left: 6.5%;
 
-    #desktopLogo {
-      @include breakpoint(mobile) {
+    .progressive-image {
+      width: 100%;
+
+      #desktopLogo {
+        @include breakpoint(mobile) {
+          display: none;
+        }
+        min-width: 125px;
+      }
+
+      #mobileLogo {
+        @include breakpoint(mobile) {
+          display: block;
+        }
+
         display: none;
       }
-      min-width: 125px;
-    }
 
-    #mobileLogo {
-      @include breakpoint(mobile) {
-        display: block;
-      }
-
-      display: none;
     }
 
     P {
@@ -111,7 +116,7 @@ section {
         display: none;
       }
 
-      @include breakpoint(Landscape) {
+      @include breakpoint(tabletLandscape) {
         display: block;
       }
 
@@ -263,7 +268,7 @@ section {
           padding: 0px;
         }
 
-        @include breakpoint(Landscape) {
+        @include breakpoint(tabletLandscape) {
           padding: 10px;
         }
 
@@ -386,14 +391,14 @@ section {
   .interestDiv {
     width: 73px;
     display: inline-block;
-
     padding-top: 30px;
+
 
     @include breakpoint(tabletPortrait) {
       margin: 0;
     }
 
-    @include breakpoint(Landscape) {
+    @include breakpoint(tabletLandscape) {
       margin: 0 20px;
     }
 
@@ -431,7 +436,7 @@ section {
       padding: 0;
     }
 
-    @include breakpoint(Landscape) {
+    @include breakpoint(tabletLandscape) {
       margin: -25px 25px;
     }
 
@@ -469,7 +474,7 @@ section {
     //  display: none;
     //}
     //
-    //#personDiv2 {
+    //#personDiv2 {  make sure you get this working
     //  position: relative;
     //  z-index: 0;
     //  display: none;
@@ -503,11 +508,16 @@ section {
       margin: 0 auto;
       padding: 0 35px 0 35px;
 
+      figure {
+        padding: 0;
+      }
+
       img {
         @include breakpoint(mobile) {
           padding: 3px;
         }
         max-width: 65px;
+
       }
       //#twIcon, #fbIcon, #liIcon, #emIcon {
       //  display: none;

@@ -93,7 +93,7 @@ $wk: -webkit-;
 
 // mixin - break point
 @mixin breakpoint($point) {
-  @if $point == landscape {
+  @if $point == tabletLandscape {
     @media (min-width: 60em) { @content ; }
   }
   @else if $point == tabletPortrait {

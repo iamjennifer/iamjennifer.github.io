@@ -7,7 +7,7 @@
     Copyright (c) 2018 jennifer howe. All rights reserved.
  */
 /* ========== [ResetCSS] ========== */
-body, html, div, blockquote, img, label, p, h1, h2, h3, h4, h5, h6, pre, ul, ol, li, dl, dt, dd, form, a, fieldset, input, th, td {
+body, html, div, blockquote, figure, img, label, p, h1, h2, h3, h4, h5, h6, pre, ul, ol, li, dl, dt, dd, form, a, fieldset, input, th, td {
   margin: 0;
   padding: 0;
   border: 0;
@@ -62,6 +62,9 @@ a img {
 img {
   image-rendering: -webkit-optimize-contrast;
   max-width: 100%; }
+
+figure {
+  width: 100%; }
 
 *:focus {
   outline: 0; }
@@ -127,7 +130,7 @@ html {
     html section header .secNum {
       display: block;
       font-size: 0.6rem;
-      background: #ffffff url("../assets/images/png/circle.png") no-repeat center center;
+      background: #ffffff url("../assets/images/svg/circle.svg") no-repeat center center;
       color: #ffffff;
       height: 35px;
       padding-top: 22px; }
@@ -215,7 +218,7 @@ html {
           padding-top: 25px; } }
     @media (max-width: 36em) {
       .main-nav a #span3, .main-nav a #span4, .main-nav a #span5, .main-nav a #span8 {
-        background: url("../assets/images/png/mainNavIcon_mobile.png") no-repeat center 0;
+        background: url("../assets/images/svg/mainNavIcon_mobile.svg") no-repeat center 0;
         height: 25px; } }
     @media (max-width: 36em) {
       .main-nav a #span4 {
@@ -272,9 +275,9 @@ html {
     font-size: 0.7rem;
     padding-top: 8px; }
   #sideNav #expList .collapsed {
-    background-image: url("../assets/images/png/collapsed.png"); }
+    background-image: url("../assets/images/svg/collapsed.svg"); }
   #sideNav #expList .expanded {
-    background-image: url(../assets/images/png/expanded.png); }
+    background-image: url(../assets/images/svg/expanded.svg); }
   #sideNav h5 {
     display: none; }
 
@@ -336,16 +339,18 @@ section {
       margin-top: 190px;
       margin-left: 20px;
       height: 290px; } }
-  #introSection .introDiv #desktopLogo {
-    min-width: 125px; }
-    @media (max-width: 36em) {
-      #introSection .introDiv #desktopLogo {
-        display: none; } }
-  #introSection .introDiv #mobileLogo {
-    display: none; }
-    @media (max-width: 36em) {
-      #introSection .introDiv #mobileLogo {
-        display: block; } }
+  #introSection .introDiv .progressive-image {
+    width: 100%; }
+    #introSection .introDiv .progressive-image #desktopLogo {
+      min-width: 125px; }
+      @media (max-width: 36em) {
+        #introSection .introDiv .progressive-image #desktopLogo {
+          display: none; } }
+    #introSection .introDiv .progressive-image #mobileLogo {
+      display: none; }
+      @media (max-width: 36em) {
+        #introSection .introDiv .progressive-image #mobileLogo {
+          display: block; } }
   #introSection .introDiv P {
     font-family: "sorts_mill_goudyregular", serif;
     width: 407px; }
@@ -367,6 +372,9 @@ section {
     @media (min-width: 37.5em) {
       #introSection .introDiv #pageOneCircle {
         display: none; } }
+    @media (min-width: 60em) {
+      #introSection .introDiv #pageOneCircle {
+        display: block; } }
 @-webkit-keyframes blink {
   0% {
     opacity: 1; }
@@ -480,6 +488,9 @@ section {
       @media (min-width: 37.5em) {
         #skillSection #skillWrapper .skillDiv .spinnerWrapper {
           padding: 0px; } }
+      @media (min-width: 60em) {
+        #skillSection #skillWrapper .skillDiv .spinnerWrapper {
+          padding: 10px; } }
       #skillSection #skillWrapper .skillDiv .spinnerWrapper h4 {
         text-align: center;
         margin-bottom: 0;
@@ -764,6 +775,9 @@ section {
   @media (min-width: 37.5em) {
     #interestSection .interestDiv {
       margin: 0; } }
+  @media (min-width: 60em) {
+    #interestSection .interestDiv {
+      margin: 0 20px; } }
   #interestSection .interestDiv p {
     font-size: 0.75rem;
     margin-top: -10px;
@@ -780,6 +794,9 @@ section {
     #personalitySection .personDiv {
       margin: -25px 0px;
       padding: 0; } }
+  @media (min-width: 60em) {
+    #personalitySection .personDiv {
+      margin: -25px 25px; } }
   #personalitySection .personDiv p {
     font-size: 0.75rem;
     display: inline; }
@@ -821,6 +838,8 @@ section {
       #contactSection figure .contactDiv {
         display: inline;
         padding: 0; } }
+    #contactSection figure .contactDiv figure {
+      padding: 0; }
     #contactSection figure .contactDiv img {
       max-width: 65px; }
       @media (max-width: 36em) {

@@ -99,7 +99,7 @@
 
     #span3, #span4, #span5, #span8 {
       @include breakpoint(mobile) {
-        background: url("../assets/images/png/mainNavIcon_mobile.png") no-repeat center 0;
+        background: url("../assets/images/svg/mainNavIcon_mobile.svg") no-repeat center 0;
         height: 25px;
       }
     }
@@ -200,12 +200,12 @@
     }
     // Collapsed state for list element
     .collapsed {
-      background-image: url('../assets/images/png/collapsed.png');
+      background-image: url('../assets/images/svg/collapsed.svg');
     }
     // Expanded state for list element
     // NOTE: This class must be located UNDER the collapsed one
     .expanded {
-      background-image: url(../assets/images/png/expanded.png);
+      background-image: url(../assets/images/svg/expanded.svg);
     }
   }
 
