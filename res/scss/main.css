@@ -469,6 +469,10 @@ section {
     height: 630px; } }
 #skillSection #skillWrapper {
   height: 250px; }
+  @media (max-width: 36em) {
+    #skillSection #skillWrapper {
+      width: 300px;
+      margin: 0 auto; } }
   #skillSection #skillWrapper .skillDiv {
     display: inline-block;
     margin: 30px auto; }

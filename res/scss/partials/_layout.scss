@@ -242,6 +242,10 @@ section {
   #skillWrapper {
     height: 250px;
     //display: none;
+    @include breakpoint(mobile) {
+      width: 300px;
+      margin: 0 auto;
+    }
 
     .skillDiv {
 
