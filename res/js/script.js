@@ -15,13 +15,94 @@
 
  **/
 
+/**************************************************************/
+/* main actions                                               */
+/**************************************************************/
+$(document).ready(function(){
+
+
+    smoothScrolling();
+    prepareList();
+
+    $("#pageOneBtn").click(function(){
+        var div = $("#pageOneCircleInside");
+        div.animate({height:410},"slow");
+        div.animate({width:'28.50%'},"slow");
+    });
+
+
+
+
+});
+
+
+/**************************************************************/
+/* animation for each section                                 */
+/**************************************************************/
+$(document).scroll(function () {
+
+    var y = $(this).scrollTop();
+    if (y > 700) {
+        $('#sideNav').fadeIn();
+        $('#upBtn').fadeIn();
+        $('#whoDiv1').slideDown( "slow" );
+        $('#whoDiv2').slideDown( "slow" );
+    } else {
+        $('#sideNav').fadeOut();
+        $('#upBtn').fadeOut();
+    }
+
+    if (y > 1400) {
+        $('#focusWrapper').slideDown( "slow" );
+        $('#focusDiv1').delay(400).fadeIn();
+        $('#focusDiv2').delay(800).fadeIn();
+        $('#focusDiv3').delay(1200).fadeIn();
+    }
+
+    if (y > 2100) {
+        $('#skillWrapper').slideDown( "slow" );
+    }
+
+    if (y > 2800) {
+        $('#workWrapper').slideDown( "slow" );
+    }
+
+    if (y > 3500) {
+        $('#interestWrapper').slideDown( "slow" );
+        $('#interestDiv1').delay(400).fadeIn();
+        $('#interestDiv2').delay(800).fadeIn();
+        $('#interestDiv3').delay(1200).fadeIn();
+        $('#interestDiv4').delay(1600).fadeIn();
+        $('#interestDiv5').delay(2000).fadeIn();
+        $('#interestDiv6').delay(2400).fadeIn();
+    }
+
+    if (y > 4500) {
+        $('#personDiv1').delay(100).fadeIn();
+        $('#personDiv2').slideDown("slow");
+
+
+    }
+
+    if (y > 5100) {
+        $('#twIcon').slideDown("slow");
+        $('#fbIcon').slideDown("slow");
+        $('#liIcon').slideDown("slow");
+        $('#emIcon').slideDown("slow");
+    }
+
+
+});
+
+
+
 
 
 /**************************************************************/
 /* smooth scrolling                                           */
 /**************************************************************/
 
-$(document).ready(function(){
+function smoothScrolling(){
     // Add smooth scrolling to all links
 
     $("a").on('click', function(event) {
@@ -45,8 +126,89 @@ $(document).ready(function(){
             });
         } // End if
     });
+}
+
+/**************************************************************/
+/* Prepares the cv to be dynamically expandable/collapsible   */
+/**************************************************************/
+
+function prepareList() {
+
+    $('#expList').find('li:has(ul)')
+        .click( function(event) {
+            if (this == event.target) {
+                $(this).toggleClass('expanded');
+                $(this).children('ul').toggle('medium');
+            }
+            return false;
+        })
+        .addClass('collapsed')
+        .children('ul').hide();
+
+    //Hack to add links inside the cv
+    $('#expList a').unbind('click').click(function () {
+
+        // window.open($(this).attr('href'),"_self");
+        smoothScrolling();
+        // return false;
+
+    });
+
+
+}
+
+
+/**************************************************************/
+/* timer animation for skill section                          */
+/**************************************************************/
+
+$({countNum: $('#counter1').text()}).animate({countNum: 88}, {
+    duration: 1500,
+    easing:'linear',
+    step: function() {
+        $('#counter1').text(Math.floor(this.countNum));
+    },
+    complete: function() {
+    }
 });
 
+$({countNum: $('#counter2').text()}).animate({countNum: 93}, {
+    duration: 1500,
+    easing:'linear',
+    step: function() {
+        $('#counter2').text(Math.floor(this.countNum));
+    },
+    complete: function() {
+    }
+});
 
+$({countNum: $('#counter3').text()}).animate({countNum: 85}, {
+    duration: 1500,
+    easing:'linear',
+    step: function() {
+        $('#counter3').text(Math.floor(this.countNum));
+    },
+    complete: function() {
+    }
+});
 
+$({countNum: $('#counter4').text()}).animate({countNum: 79}, {
+    duration: 1500,
+    easing:'linear',
+    step: function() {
+        $('#counter4').text(Math.floor(this.countNum));
+    },
+    complete: function() {
+    }
+});
+
+$({countNum: $('#counter5').text()}).animate({countNum: 81}, {
+    duration: 1500,
+    easing:'linear',
+    step: function() {
+        $('#counter5').text(Math.floor(this.countNum));
+    },
+    complete: function() {
+    }
+});
 

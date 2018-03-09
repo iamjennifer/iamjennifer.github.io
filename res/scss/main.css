@@ -70,7 +70,7 @@ figure {
   outline: 0; }
 
 /* ========== [Utils] ========== */
-.sectionDiv, #whoSection .whoDiv, #focusSection .focusDiv {
+.sectionDiv, #whoSection .whoDiv, #focusSection .focusDiv, #workSection .workDiv {
   width: 148px;
   margin: 0 auto;
   display: inline-block;
@@ -82,7 +82,7 @@ figure {
   letter-spacing: -1px;
   margin-bottom: 20px; }
 
-.subText, #whoSection .whoDiv p, #focusSection p {
+.subText, #whoSection .whoDiv p, #focusSection p, #workSection p {
   font-size: 0.75rem;
   border-top: 1px dashed #000000;
   margin-top: 15px;
@@ -257,6 +257,7 @@ html {
   width: 20px;
   height: 25px;
   background-color: #000000;
+  display: none;
   position: fixed;
   left: 0;
   top: 200px;
@@ -325,7 +326,7 @@ section {
         display: none; } }
     section .content .connectLine hr {
       width: 1px;
-      height: 360px;
+      height: 260px;
       border: none;
       border-right: 1px dashed #000000; }
 
@@ -438,6 +439,8 @@ section {
 @media (max-width: 36em) {
   #whoSection {
     display: none; } }
+#whoSection .whoDiv #whoDiv1, #whoSection .whoDiv #whoDiv2 {
+  display: none; }
 
 @media (max-width: 36em) {
   #focusSection {
@@ -463,12 +466,18 @@ section {
       font-size: 0.75rem;
       border-top: 1px dashed #000000;
       margin-bottom: 40px; } }
+#focusSection #focusDiv1, #focusSection #focusDiv2, #focusSection #focusDiv3 {
+  display: none; }
+#focusSection #focusWrapper {
+  height: 250px;
+  display: none; }
 
 @media (max-width: 36em) {
   #skillSection {
     height: 630px; } }
 #skillSection #skillWrapper {
-  height: 250px; }
+  height: 250px;
+  display: none; }
   @media (max-width: 36em) {
     #skillSection #skillWrapper {
       width: 300px;
@@ -482,7 +491,7 @@ section {
     #skillSection #skillWrapper .skillDiv .spinnerWrapper {
       width: 130px;
       display: inline-block;
-      height: 150px; }
+      height: 180px; }
       @media (max-width: 36em) {
         #skillSection #skillWrapper .skillDiv .spinnerWrapper {
           position: relative;
@@ -769,6 +778,16 @@ section {
         top: -80px;
         border-radius: 100%; }
 
+#workSection .content {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto; }
+#workSection p {
+  margin-top: 0;
+  padding: 0 0 30px 5px;
+  border-top: none;
+  text-align: left; }
+
 @media (max-width: 36em) {
   #interestSection {
     display: none; } }
@@ -788,6 +807,9 @@ section {
     margin-left: -35px;
     transform: rotate(-50deg);
     width: 150px; }
+#interestSection #interestWrapper {
+  height: 250px;
+  display: none; }
 
 @media (max-width: 36em) {
   #personalitySection {
@@ -820,6 +842,12 @@ section {
       position: relative;
       left: 103px;
       top: 18px; }
+  #personalitySection .personDiv #personDiv1 {
+    display: none; }
+  #personalitySection .personDiv #personDiv2 {
+    position: relative;
+    z-index: 0;
+    display: none; }
 
 @media (max-width: 36em) {
   #contactSection {
@@ -849,6 +877,8 @@ section {
       @media (max-width: 36em) {
         #contactSection figure .contactDiv img {
           padding: 3px; } }
+    #contactSection figure .contactDiv #twIcon, #contactSection figure .contactDiv #fbIcon, #contactSection figure .contactDiv #liIcon, #contactSection figure .contactDiv #emIcon {
+      display: none; }
 
 footer {
   width: 100%;

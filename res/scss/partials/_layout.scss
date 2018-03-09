@@ -45,7 +45,7 @@ section {
       margin-top: 50px;
       hr {
         width: 1px;
-        height: 360px; // line length
+        height: 260px; // line length
         border: none;
         border-right: 1px dashed $black;
       }
@@ -139,7 +139,7 @@ section {
         @include transition(all 1s ease-in-out);
         @include animation(blink);
       }
-      // ?? not moving yet
+
       #pageOneCircleInside {
         border-bottom: 1px dashed $black;
         border-left: 1px dashed $black;
@@ -149,7 +149,7 @@ section {
         height: 0;
         position: relative;
       }
-    // ?? not moving yet
+
       #cover {
         width: 8px;
         height: 2px;
@@ -180,9 +180,9 @@ section {
       @extend .subText;
     }
 
-    //#whoDiv1, #whoDiv2 {
-    //  display: none;
-    //}
+    #whoDiv1, #whoDiv2 {
+      display: none;
+    }
   }
 }
 
@@ -223,14 +223,14 @@ section {
     padding-top: 5px;
   }
 
-  //#focusDiv1, #focusDiv2, #focusDiv3 {
-  //  display: none;
-  //}
-  //
-  //#focusWrapper {
-  //  height: 250px;
-  //  display: none;
-  //}
+  #focusDiv1, #focusDiv2, #focusDiv3 {
+    display: none;
+  }
+
+  #focusWrapper {
+    height: 250px;
+    display: none;
+  }
 
 }
 
@@ -241,7 +241,7 @@ section {
   }
   #skillWrapper {
     height: 250px;
-    //display: none;
+    display: none;
     @include breakpoint(mobile) {
       width: 300px;
       margin: 0 auto;
@@ -266,7 +266,7 @@ section {
         }
         width: 130px;
         display: inline-block;
-        height: 150px;
+        height: 180px;
 
         @include breakpoint(tabletPortrait) {
           padding: 0px;
@@ -288,13 +288,11 @@ section {
           text-align: center;
         }
 
-        .number { // number is not shown because JS
+        .number {
           margin-top: -120px;
           position: relative;
           z-index: 10;
         }
-
-
 
         .spinner {
           width: 100px;
@@ -387,6 +385,56 @@ section {
   } //end skillWrapper
 }
 
+// Work Section
+#workSection {
+  //@include breakpoint(mobile) {
+  //  height: 900px;
+  //}
+
+  .content {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  .workDiv {
+    //@include breakpoint(mobile) {
+    //  width: 30%;
+    //  display: block;
+    //  margin: 0 auto;
+    //}
+    @extend .sectionDiv;
+  }
+
+
+
+  p {
+    //@include breakpoint(mobile) {
+    //  font-size: 0.75rem;
+    //  border-top: 1px dashed #000000;
+    //  margin-bottom: 40px;
+    //}
+    @extend .subText;
+    margin-top: 0;
+    padding: 0 0 30px 5px;
+    border-top: none;
+    text-align: left;
+
+  }
+
+  //#workDiv1, #workDiv2, #workDiv3 {
+  //  display: none;
+  //}
+
+  //#focusWrapper {
+  //  height: 250px;
+  //  display: none;
+  //}
+
+}
+
+
 // Interest Section
 #interestSection {
   @include breakpoint(mobile) {
@@ -415,16 +463,16 @@ section {
       width: 150px;
     }
 
-    //#interestDiv1, #interestDiv2, #interestDiv3,
-    //#interestDiv4, #interestDiv5, #interestDiv6 {
-    //  display: none;
-    //}
+    #interestDiv1, #interestDiv2, #interestDiv3,
+    #interestDiv4, #interestDiv5, #interestDiv6 {
+      //display: none;
+    }
   }
 
-  //#interestWrapper {
-  //  height: 250px;
-  //  display: none;
-  //}
+  #interestWrapper {
+    height: 250px;
+    display: none;
+  }
 }
 
 // Personality Section
@@ -474,15 +522,15 @@ section {
       }
     } //end p
 
-    //#personDiv1 {
-    //  display: none;
-    //}
-    //
-    //#personDiv2 {  make sure you get this working
-    //  position: relative;
-    //  z-index: 0;
-    //  display: none;
-    //}
+    #personDiv1 {
+      display: none;
+    }
+
+    #personDiv2 {
+      position: relative;
+      z-index: 0;
+      display: none;
+    }
 
   } // end .personDiv
 }
@@ -523,9 +571,9 @@ section {
         max-width: 65px;
 
       }
-      //#twIcon, #fbIcon, #liIcon, #emIcon {
-      //  display: none;
-      //}
+      #twIcon, #fbIcon, #liIcon, #emIcon {
+        display: none;
+      }
     }
 
   }
