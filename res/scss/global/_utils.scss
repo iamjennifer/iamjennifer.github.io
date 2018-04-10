@@ -94,13 +94,16 @@ $wk: -webkit-;
 // mixin - break point
 @mixin breakpoint($point) {
   @if $point == tabletLandscape {
+    //min width 960px
     @media (min-width: 60em) { @content ; }
   }
   @else if $point == tabletPortrait {
-    @media (min-width: 37.5em)  { @content ; }
+    //min width 656px
+    @media (min-width: 41em)  { @content ; }
   }
   @else if $point == mobile {
-    @media (max-width: 36em)  { @content ; }
+    //max width 655px
+    @media (max-width: 40.938em)  { @content ; }
   }
 }
 

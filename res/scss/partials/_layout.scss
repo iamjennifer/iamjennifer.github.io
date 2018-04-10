@@ -103,7 +103,7 @@ section {
       font-family: $introFontStackItalic;
       font-weight: 700;
       letter-spacing: 0.02rem;
-      font-size: 0.9rem;
+      font-size: 1rem;
     }
 
     #pageOneCircle {
@@ -120,8 +120,8 @@ section {
         display: block;
       }
 
-      margin-top: -18px;
-      margin-left: 175px;
+      margin-top: -13px;
+      margin-left: 165px;
 
       @include keyframes(blink){
         0% {
@@ -190,6 +190,12 @@ section {
 #focusSection {
   @include breakpoint(mobile) {
     height: 900px;
+    .secNum {
+      display: none;
+    }
+    .mobileSecNum {
+      display: block;
+    }
   }
 
   .focusDiv {
@@ -224,10 +230,16 @@ section {
   }
 
   #focusDiv1, #focusDiv2, #focusDiv3 {
+    @include breakpoint(mobile) {
+      display: block;
+    }
     display: none;
   }
 
   #focusWrapper {
+    @include breakpoint(mobile) {
+      display: block;
+    }
     height: 250px;
     display: none;
   }
@@ -238,19 +250,28 @@ section {
 #skillSection{
   @include breakpoint(mobile) {
     height: 630px;
+    .secNum {
+      display: none;
+    }
+    .mobileSecNum {
+      display: block;
+    }
   }
   #skillWrapper {
     height: 250px;
     display: none;
+
     @include breakpoint(mobile) {
       width: 300px;
       margin: 0 auto;
+      display: block;
     }
 
     .skillDiv {
 
       @include breakpoint(mobile) {
         margin: 0px auto;
+        display: block;
       }
 
       display: inline-block;
@@ -261,18 +282,22 @@ section {
           &:first-child {
             display: none;
           }
+          width: 130px;
           position: relative;
           z-index: 0;
         }
-        width: 130px;
+
+
         display: inline-block;
         height: 180px;
 
         @include breakpoint(tabletPortrait) {
+          width: 110px;
           padding: 0px;
         }
 
         @include breakpoint(tabletLandscape) {
+          width: 130px;
           padding: 10px;
         }
 
@@ -387,12 +412,19 @@ section {
 
 // Work Section
 #workSection {
-  //@include breakpoint(mobile) {
-  //  height: 900px;
-  //}
+  @include breakpoint(mobile) {
+    .secNum {
+      display: none;
+    }
+    .mobileSecNum {
+      display: block;
+    }
+  }
 
   .content {
-    width: 70%;
+    @include breakpoint(tabletLandscape) {
+      width: 57.625em;
+    }
     margin-left: auto;
     margin-right: auto;
   }
@@ -405,6 +437,11 @@ section {
     //  margin: 0 auto;
     //}
     @extend .sectionDiv;
+
+    img {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
+    }
+
   }
 
 
@@ -416,21 +453,47 @@ section {
     //  margin-bottom: 40px;
     //}
     @extend .subText;
-    margin-top: 0;
+    margin-top: 3px;
     padding: 0 0 30px 5px;
     border-top: none;
     text-align: left;
 
   }
 
-  //#workDiv1, #workDiv2, #workDiv3 {
-  //  display: none;
-  //}
+  #workDiv1, #workDiv2,
+  #workDiv3, #workDiv4,
+  #workDiv5, #workDiv6,
+  #workDiv7, #workDiv8 {
+    @include breakpoint(mobile) {
+      display: block;
+    }
+    display: none;
+  }
 
-  //#focusWrapper {
-  //  height: 250px;
-  //  display: none;
-  //}
+  #workWrapper {
+    @include breakpoint(mobile) {
+      height: 700px;
+      display: block;
+      overflow: hidden;
+    }
+
+    @include breakpoint(tabletPortrait) {
+      //background-color: yellow;
+      overflow: hidden;
+    }
+
+    @include breakpoint(tabletLandscape) {
+      //background-color: #337ab7;
+
+    }
+
+    height: 340px;
+    display: none;
+
+
+
+
+  }
 
 }
 
@@ -465,7 +528,7 @@ section {
 
     #interestDiv1, #interestDiv2, #interestDiv3,
     #interestDiv4, #interestDiv5, #interestDiv6 {
-      //display: none;
+      display: none;
     }
   }
 
@@ -539,6 +602,12 @@ section {
 #contactSection {
   @include breakpoint(mobile) {
     padding-bottom: 70px;
+    .secNum {
+      display: none;
+    }
+    .mobileSecNum {
+      display: block;
+    }
   }
   figure {
     @include breakpoint(mobile) {
@@ -572,6 +641,9 @@ section {
 
       }
       #twIcon, #fbIcon, #liIcon, #emIcon {
+        @include breakpoint(mobile) {
+          display: inline;
+        }
         display: none;
       }
     }

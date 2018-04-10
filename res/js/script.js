@@ -42,6 +42,7 @@ $(document).ready(function(){
 $(document).scroll(function () {
 
     var y = $(this).scrollTop();
+
     if (y > 700) {
         $('#sideNav').fadeIn();
         $('#upBtn').fadeIn();
@@ -65,12 +66,20 @@ $(document).scroll(function () {
 
     if (y > 2800) {
         $('#workWrapper').slideDown( "slow" );
+        $('#workDiv1').delay(400).fadeIn();
+        $('#workDiv2').delay(800).fadeIn();
+        $('#workDiv3').delay(1200).fadeIn();
+        $('#workDiv4').delay(1600).fadeIn();
+        $('#workDiv5').delay(2000).fadeIn();
+        $('#workDiv6').delay(2400).fadeIn();
+        $('#workDiv7').delay(2800).fadeIn();
+        $('#workDiv8').delay(3200).fadeIn();
     }
 
     if (y > 3500) {
         $('#interestWrapper').slideDown( "slow" );
-        $('#interestDiv1').delay(400).fadeIn();
-        $('#interestDiv2').delay(800).fadeIn();
+        $('#interestDiv1').delay(500).fadeIn();
+        $('#interestDiv2').delay(1000).fadeIn();
         $('#interestDiv3').delay(1200).fadeIn();
         $('#interestDiv4').delay(1600).fadeIn();
         $('#interestDiv5').delay(2000).fadeIn();
@@ -128,9 +137,9 @@ function smoothScrolling(){
     });
 }
 
-/**************************************************************/
-/* Prepares the cv to be dynamically expandable/collapsible   */
-/**************************************************************/
+/**********************************************************************/
+/* Prepares the cv (sidebar) to be dynamically expandable/collapsible */
+/**********************************************************************/
 
 function prepareList() {
 
