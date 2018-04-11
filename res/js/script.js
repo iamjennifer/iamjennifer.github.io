@@ -12,6 +12,8 @@
 
  ----------------------------------------------------------
  I have learned much from and used the plug-in where offered from:
+ Lightbox by Lokesh Dhakar
+ http://lokeshdhakar.com/
 
  **/
 

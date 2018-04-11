@@ -348,12 +348,7 @@ section {
       min-width: 125px; }
       @media (max-width: 40.938em) {
         #introSection .introDiv .progressive-image #desktopLogo {
-          display: none; } }
-    #introSection .introDiv .progressive-image #mobileLogo {
-      display: none; }
-      @media (max-width: 40.938em) {
-        #introSection .introDiv .progressive-image #mobileLogo {
-          display: block; } }
+          width: 90%; } }
   #introSection .introDiv P {
     font-family: "sorts_mill_goudyregular", serif;
     width: 407px; }
@@ -832,7 +827,7 @@ section {
   display: none; }
   @media (max-width: 40.938em) {
     #workSection #workWrapper {
-      height: 700px;
+      height: 710px;
       display: block;
       overflow: hidden; } }
   @media (min-width: 41em) {

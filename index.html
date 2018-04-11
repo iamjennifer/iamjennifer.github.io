@@ -13,7 +13,10 @@
 
 	<!-- Main Stylesheets: style work for all the screen  -->
 	<link rel="stylesheet" href="res/scss/main.css" type="text/css">
-    <!-- Favicons -->
+	<!-- LightBox  -->
+	<link rel="stylesheet" href="vendors/css/lightbox.css" type="text/css">
+
+    <!-- Favicon -->
 	<link rel="shortcut icon" href="res/favicon.ico" type="image/x-icon">
 
 </head>
@@ -33,7 +36,7 @@
 
 		<a id="firstSection"></a> <!-- for upBtn -->
 
-		<nav class="main-nav" id="main-nav" role="navigation">
+		<nav class="main-nav" id="main-nav">
 			<h5>main navigation</h5>
 			<div id="mainNavBox">
 				<a href="#firstSection" id="span1"><span class="topSpan">00. </span><span>INTRO</span></a>
@@ -123,16 +126,12 @@
 					<picture>
 						<source type="image/svg+xml" srcset="res/assets/images/svg/logo_desktop.svg">
 						<img id="desktopLogo" src="res/assets/images/png/logo_desktop.png" alt="logo" />
-						<img id="mobileLogo" src="res/assets/images/png/logo_mobile.png" alt="logo" />
 					</picture>
 				</figure>
 
                 <p itemprop="about">—noun, a designer named&nbsp;<span class="italicFont"> jennifer howe </span>who <br>specializes
 					in graphic design, user interface/experience <br>and web development.</p>
 				<div id="pageOneCircle">
-					<!--<a data-scroll data-options='{ "easing": "linear" }' href="#linkWho" id="pageOneBtn">-->
-						<!--<img src="res/assets/images/png/pageOneCircle.png" alt="page one circle" class="objblink" />-->
-					<!--</a>-->
 
 					<figure>
 
@@ -403,52 +402,68 @@
 
 					<div class="workDiv">
 						<div id="workDiv1">
-							<figure>
-								<img src="res/assets/images/jpg/BambooToo_1x.jpg"
-									 alt="layout presentation"
-									 srcset="res/assets/images/jpg/BambooToo_1x.jpg 1x,
-									 res/assets/images/jpg/BambooToo_2x.jpg 2x,
-									 res/assets/images/jpg/BambooToo_3x.jpg 3x "/>
-							</figure>
+							<a href="res/assets/images/jpg/BambooToo_org.jpg" data-lightbox="BambooToo" data-title="User Interface Design">
+								<figure>
+									<img src="res/assets/images/jpg/BambooToo_1x.jpg"
+										 alt="layout presentation"
+										 srcset="res/assets/images/jpg/BambooToo_1x.jpg 1x,
+										 res/assets/images/jpg/BambooToo_2x.jpg 2x,
+										 res/assets/images/jpg/BambooToo_3x.jpg 3x "/>
+								</figure>
+							</a>
 							<p>Layout Design</p>
 						</div>
 					</div>
 
 					<div class="workDiv">
 						<div id="workDiv2">
-							<figure>
-								<img src="res/assets/images/jpg/ChowHound_desktop_1x.jpg"
-									 alt="layout presentation"
-									 srcset="res/assets/images/jpg/ChowHound_desktop_1x.jpg 1x,
-									 res/assets/images/jpg/ChowHound_desktop_2x.jpg 2x,
-									 res/assets/images/jpg/ChowHound_desktop_3x.jpg 3x "/>
-							</figure>
+							<a href="res/assets/images/jpg/ChowHound_desktop_org.jpg" data-lightbox="responsive" data-title="Responsive Web Design - Desktop">
+								<figure>
+									<img src="res/assets/images/jpg/ChowHound_desktop_1x.jpg"
+										 alt="layout presentation"
+										 srcset="res/assets/images/jpg/ChowHound_desktop_1x.jpg 1x,
+										 res/assets/images/jpg/ChowHound_desktop_2x.jpg 2x,
+										 res/assets/images/jpg/ChowHound_desktop_3x.jpg 3x "/>
+								</figure>
+							</a>
+							<a href="res/assets/images/jpg/ChowHound_tablet_org.jpg" data-lightbox="responsive" data-title="Responsive Web Design - Tablet"></a>
+							<a href="res/assets/images/jpg/ChowHound_mobile_org.jpg" data-lightbox="responsive" data-title="Responsive Web Design - Mobile"></a>
 							<p>Responsive Website</p>
 						</div>
 					</div>
 
 					<div class="workDiv">
 						<div id="workDiv3">
-							<figure>
-								<img src="res/assets/images/jpg/onlineStore_cover_1x.jpg"
-									 alt="layout presentation"
-									 srcset="res/assets/images/jpg/onlineStore_cover_1x.jpg 1x,
-									 res/assets/images/jpg/onlineStore_cover_2x.jpg 2x,
-									 res/assets/images/jpg/onlineStore_cover_3x.jpg 3x "/>
-							</figure>
+							<a href="res/assets/images/jpg/onlineStore_cover_org.jpg" data-lightbox="shopping" data-title="Online Store - Jewelry Shopping Site">
+								<figure>
+									<img src="res/assets/images/jpg/onlineStore_cover_1x.jpg"
+										 alt="layout presentation"
+										 srcset="res/assets/images/jpg/onlineStore_cover_1x.jpg 1x,
+										 res/assets/images/jpg/onlineStore_cover_2x.jpg 2x,
+										 res/assets/images/jpg/onlineStore_cover_3x.jpg 3x "/>
+								</figure>
+							</a>
+							<a href="res/assets/images/jpg/onlineStore_product_org.jpg" data-lightbox="shopping" data-title="Online Store - Product Page"></a>
+							<a href="res/assets/images/jpg/onlineStore_detail_org.jpg" data-lightbox="shopping" data-title="Online Store - Product Detail"></a>
+							<a href="res/assets/images/jpg/onlineStore_setup_org.jpg" data-lightbox="shopping" data-title="Online Store - SetUp/SignUp Page"></a>
+							<a href="res/assets/images/jpg/onlineStore_shopping_org.jpg" data-lightbox="shopping" data-title="Online Store - Shopping Cart"></a>
+
 							<p>Online Shopping</p>
 						</div>
 					</div>
 
 					<div class="workDiv">
 						<div id="workDiv4">
-							<figure>
-								<img src="res/assets/images/jpg/game_cover_1x.jpg"
-									 alt="layout presentation"
-									 srcset="res/assets/images/jpg/game_cover_1x.jpg 1x,
-									 res/assets/images/jpg/game_cover_2x.jpg 2x,
-									 res/assets/images/jpg/game_cover_3x.jpg 3x "/>
-							</figure>
+							<a href="res/assets/images/jpg/game_cover_org.jpg" data-lightbox="game" data-title="Web Application - Shape Puzzle Game (Cover)">
+								<figure>
+									<img src="res/assets/images/jpg/game_cover_1x.jpg"
+										 alt="layout presentation"
+										 srcset="res/assets/images/jpg/game_cover_1x.jpg 1x,
+										 res/assets/images/jpg/game_cover_2x.jpg 2x,
+										 res/assets/images/jpg/game_cover_3x.jpg 3x "/>
+								</figure>
+							</a>
+							<a href="res/assets/images/jpg/game_intro_org.jpg" data-lightbox="game" data-title="Web Application - Shape Puzzle Game (Intro)"></a>
 							<p>Web Application</p>
 						</div>
 					</div>
@@ -457,53 +472,64 @@
 
 					<div class="workDiv">
 						<div id="workDiv5">
-							<figure>
-								<img src="res/assets/images/jpg/brochure_1x.jpg"
-									 alt="brochure design"
-									 srcset="res/assets/images/jpg/brochure_1x.jpg 1x,
-									 res/assets/images/jpg/brochure_2x.jpg 2x,
-									 res/assets/images/jpg/brochure_3x.jpg 3x "/>
-							</figure>
-							</figure>
+							<a href="res/assets/images/jpg/brochure_front_org.jpg" data-lightbox="brochure" data-title="Company Brochure Design - Front">
+								<figure>
+									<img src="res/assets/images/jpg/brochure_1x.jpg"
+										 alt="brochure design"
+										 srcset="res/assets/images/jpg/brochure_1x.jpg 1x,
+										 res/assets/images/jpg/brochure_2x.jpg 2x,
+										 res/assets/images/jpg/brochure_3x.jpg 3x "/>
+								</figure>
+							</a>
+							<a href="res/assets/images/jpg/brochure_back_org.jpg" data-lightbox="brochure" data-title="Company Brochure Design - Back">
+							</a>
 							<p>Organization Brochure</p>
 						</div>
 					</div>
 
 					<div class="workDiv">
 						<div id="workDiv6">
-							<figure>
-								<img src="res/assets/images/jpg/package_1x.jpg"
-									 alt="package design"
-									 srcset="res/assets/images/jpg/package_1x.jpg 1x,
-									 res/assets/images/jpg/package_2x.jpg 2x,
-									 res/assets/images/jpg/package_3x.jpg 3x "/>
-							</figure>
+							<a href="res/assets/images/jpg/package_org.jpg" data-lightbox="package" data-title="Garden Seed Package Design">
+								<figure>
+									<img src="res/assets/images/jpg/package_1x.jpg"
+										 alt="package design"
+										 srcset="res/assets/images/jpg/package_1x.jpg 1x,
+										 res/assets/images/jpg/package_2x.jpg 2x,
+										 res/assets/images/jpg/package_3x.jpg 3x "/>
+								</figure>
+							</a>
 							<p>Seed Package</p>
 						</div>
 					</div>
 
 					<div class="workDiv">
 						<div id="workDiv7">
-							<figure>
-								<img src="res/assets/images/jpg/postcard_1x.jpg"
-									 alt="postcard design"
-									 srcset="res/assets/images/jpg/postcard_1x.jpg 1x,
-									 res/assets/images/jpg/postcard_2x.jpg 2x,
-									 res/assets/images/jpg/postcard_3x.jpg 3x "/>
-							</figure>
+							<a href="res/assets/images/jpg/postcard_front_org.jpg" data-lightbox="postcard" data-title="Save the Date Postcard and Logo Design">
+								<figure>
+									<img src="res/assets/images/jpg/postcard_1x.jpg"
+										 alt="postcard design"
+										 srcset="res/assets/images/jpg/postcard_1x.jpg 1x,
+										 res/assets/images/jpg/postcard_2x.jpg 2x,
+										 res/assets/images/jpg/postcard_3x.jpg 3x "/>
+								</figure>
+							</a>
+							<a href="res/assets/images/jpg/postcard_back_org.jpg" data-lightbox="postcard" data-title="Save the Date Postcard - Back">
+							</a>
 							<p>Postcard + Logo</p>
 						</div>
 					</div>
 
 					<div class="workDiv">
 						<div id="workDiv8">
-							<figure>
-								<img src="res/assets/images/jpg/card_1x.jpg"
-									 alt="business card design"
-									 srcset="res/assets/images/jpg/card_1x.jpg 1x,
-									 res/assets/images/jpg/card_2x.jpg 2x,
-									 res/assets/images/jpg/card_3x.jpg 3x "/>
-							</figure>
+							<a href="res/assets/images/jpg/card_org.jpg" data-lightbox="Business" data-title="Blues Band Business Card">
+								<figure>
+									<img src="res/assets/images/jpg/card_1x.jpg"
+										 alt="business card design"
+										 srcset="res/assets/images/jpg/card_1x.jpg 1x,
+										 res/assets/images/jpg/card_2x.jpg 2x,
+										 res/assets/images/jpg/card_3x.jpg 3x "/>
+								</figure>
+							</a>
 							<p>Business Card</p>
 						</div>
 					</div>
@@ -766,10 +792,9 @@
 		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 		crossorigin="anonymous"></script>
 
-
-
 	<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
 	<script src="res/js/script.js" async></script>
+	<script src="vendors/js/lightbox.min.js" async></script>
 
 
 
