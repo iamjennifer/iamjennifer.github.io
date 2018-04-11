@@ -75,18 +75,12 @@ section {
 
       #desktopLogo {
         @include breakpoint(mobile) {
-          display: none;
+          width: 90%;
         }
         min-width: 125px;
       }
 
-      #mobileLogo {
-        @include breakpoint(mobile) {
-          display: block;
-        }
 
-        display: none;
-      }
 
     }
 
@@ -472,7 +466,7 @@ section {
 
   #workWrapper {
     @include breakpoint(mobile) {
-      height: 700px;
+      height: 710px;
       display: block;
       overflow: hidden;
     }
