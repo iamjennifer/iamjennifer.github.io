@@ -21,14 +21,14 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/CreativeWork">
+<body>
 <!--[if lte IE 9]>
 	<p class="browserupgrade">You are using an <strong>outdated</strong> browser.
 	Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
 <![endif]-->
 
-	<div id="wrapper">
-		<h1>i.am.jennifer</h1>
+	<div id="wrapper" itemscope itemtype="http://schema.org/Person">
+		<h1 itemprop="brand">i.am.jennifer</h1>
 
 		<!-- ======================== -->
 		<!-- Navigation - Main Nav/Side Nav/UpBtn -->
@@ -54,7 +54,6 @@
 			<header class="main-header">
 				<figure>
 
-
 						<a href="#main-nav" class="open-menu">
 							<picture>
 							<source type="image/svg+xml" srcset="res/assets/images/svg/nav_plus_sign.svg">
@@ -69,16 +68,7 @@
 							</picture>
 						</a>
 
-
-
 				</figure>
-				<!--<a href="#main-nav" class="open-menu">-->
-					<!--<img src="res/assets/images/png/nav_plus_sign.png" width="28" height="15" alt="icon for navigation" />-->
-				<!--</a>-->
-
-				<!--<a href="#" class="close-menu">-->
-					<!--<img src="res/assets/images/png/nav_m_sign.png" width="28" height="15" alt="icon for navigation" />-->
-				<!--</a>-->
 			</header>
 		</div>
 
@@ -118,7 +108,7 @@
 		<!-- Intro Section -->
 		<!-- ======================== -->
 
-		<section id="introSection" itemprop="creator">
+		<section id="introSection" >
 			<h2>IntroSection</h2>
 			<div class="introDiv">
 
@@ -129,7 +119,7 @@
 					</picture>
 				</figure>
 
-                <p itemprop="about">—noun, a designer named&nbsp;<span class="italicFont"> jennifer howe </span>who <br>specializes
+                <p itemprop="description">—noun, a designer named&nbsp;<span class="italicFont" itemprop="author"> jennifer howe </span>who <br>specializes
 					in graphic design, user interface/experience <br>and web development.</p>
 				<div id="pageOneCircle">
 
@@ -154,7 +144,7 @@
 		<!-- Who Section -->
 		<!-- ======================== -->
 		<a id="linkWho"></a>
-		<section id="whoSection" itemprop="about">
+		<section id="whoSection">
 			<header>
 				<span class="secNum">01</span>
 				<h2>Who?</h2>
@@ -164,7 +154,7 @@
 			<div class="content">
 				<div class="whoDiv">
 					<div id="whoDiv1">
-						<h4>[ DESIGNER ]</h4>
+						<h4 itemprop="jobTitle">[ DESIGNER ]</h4>
 						<!--<img src="res/assets/images/png/create_designIcon.png" alt="designer icon" />-->
 						<figure>
 							<picture>
@@ -177,7 +167,7 @@
 				</div>
 				<div class="whoDiv">
 					<div  id="whoDiv2">
-						<h4>[ DEVELOPER ]</h4>
+						<h4 itemprop="jobTitle">[ DEVELOPER ]</h4>
 						<!--<img src="res/assets/images/png/create_developIcon.png" alt="developer icon" />-->
 						<figure>
 							<picture>
@@ -186,7 +176,7 @@
 							</picture>
 						</figure>
 
-						<p>Turning custom designs into code that can smoothly runs on web and mobile applications.</p>
+						<p>Turning custom designs into code that runs smoothly on web and mobile platforms.</p>
 					</div>
 				</div>
 				<div class="connectLine">
@@ -322,7 +312,7 @@
 
 							<p class="number" id="counter2"></p>
 							<h4 class="spinnerTitle">{ HTML5 + SASS }</h4>
-							<p class="spinnerText">Excellent</p>
+							<p class="spinnerText">excellent</p>
 
 						</div>
 						<div class="spinnerWrapper">
@@ -389,7 +379,7 @@
 		<!-- ======================== -->
 
 		<a id="linkWork"></a>
-		<section id="workSection" itemprop="workExample">
+		<section id="workSection">
 			<header>
 				<span class="secNum">04</span>
 				<span class="mobileSecNum">03</span>
@@ -404,7 +394,7 @@
 						<div id="workDiv1">
 							<a href="res/assets/images/jpg/BambooToo_org.jpg" data-lightbox="BambooToo" data-title="User Interface Design">
 								<figure>
-									<img src="res/assets/images/jpg/BambooToo_1x.jpg"
+									<img itemprop="image" src="res/assets/images/jpg/BambooToo_1x.jpg"
 										 alt="layout presentation"
 										 srcset="res/assets/images/jpg/BambooToo_1x.jpg 1x,
 										 res/assets/images/jpg/BambooToo_2x.jpg 2x,
@@ -419,7 +409,7 @@
 						<div id="workDiv2">
 							<a href="res/assets/images/jpg/ChowHound_desktop_org.jpg" data-lightbox="responsive" data-title="Responsive Web Design - Desktop">
 								<figure>
-									<img src="res/assets/images/jpg/ChowHound_desktop_1x.jpg"
+									<img itemprop="image" src="res/assets/images/jpg/ChowHound_desktop_1x.jpg"
 										 alt="layout presentation"
 										 srcset="res/assets/images/jpg/ChowHound_desktop_1x.jpg 1x,
 										 res/assets/images/jpg/ChowHound_desktop_2x.jpg 2x,
@@ -436,7 +426,7 @@
 						<div id="workDiv3">
 							<a href="res/assets/images/jpg/onlineStore_cover_org.jpg" data-lightbox="shopping" data-title="Online Store - Jewelry Shopping Site">
 								<figure>
-									<img src="res/assets/images/jpg/onlineStore_cover_1x.jpg"
+									<img itemprop="image" src="res/assets/images/jpg/onlineStore_cover_1x.jpg"
 										 alt="layout presentation"
 										 srcset="res/assets/images/jpg/onlineStore_cover_1x.jpg 1x,
 										 res/assets/images/jpg/onlineStore_cover_2x.jpg 2x,
@@ -445,7 +435,7 @@
 							</a>
 							<a href="res/assets/images/jpg/onlineStore_product_org.jpg" data-lightbox="shopping" data-title="Online Store - Product Page"></a>
 							<a href="res/assets/images/jpg/onlineStore_detail_org.jpg" data-lightbox="shopping" data-title="Online Store - Product Detail"></a>
-							<a href="res/assets/images/jpg/onlineStore_setup_org.jpg" data-lightbox="shopping" data-title="Online Store - SetUp/SignUp Page"></a>
+							<a href="res/assets/images/jpg/onlineStore_setup_org.jpg" data-lightbox="shopping" data-title="Online Store - Settings/SignUp Page"></a>
 							<a href="res/assets/images/jpg/onlineStore_shopping_org.jpg" data-lightbox="shopping" data-title="Online Store - Shopping Cart"></a>
 
 							<p>Online Shopping</p>
@@ -456,7 +446,7 @@
 						<div id="workDiv4">
 							<a href="res/assets/images/jpg/game_cover_org.jpg" data-lightbox="game" data-title="Web Application - Shape Puzzle Game (Cover)">
 								<figure>
-									<img src="res/assets/images/jpg/game_cover_1x.jpg"
+									<img itemprop="image" src="res/assets/images/jpg/game_cover_1x.jpg"
 										 alt="layout presentation"
 										 srcset="res/assets/images/jpg/game_cover_1x.jpg 1x,
 										 res/assets/images/jpg/game_cover_2x.jpg 2x,
@@ -474,7 +464,7 @@
 						<div id="workDiv5">
 							<a href="res/assets/images/jpg/brochure_front_org.jpg" data-lightbox="brochure" data-title="Company Brochure Design - Front">
 								<figure>
-									<img src="res/assets/images/jpg/brochure_1x.jpg"
+									<img itemprop="image" src="res/assets/images/jpg/brochure_1x.jpg"
 										 alt="brochure design"
 										 srcset="res/assets/images/jpg/brochure_1x.jpg 1x,
 										 res/assets/images/jpg/brochure_2x.jpg 2x,
@@ -491,7 +481,7 @@
 						<div id="workDiv6">
 							<a href="res/assets/images/jpg/package_org.jpg" data-lightbox="package" data-title="Garden Seed Package Design">
 								<figure>
-									<img src="res/assets/images/jpg/package_1x.jpg"
+									<img itemprop="image" src="res/assets/images/jpg/package_1x.jpg"
 										 alt="package design"
 										 srcset="res/assets/images/jpg/package_1x.jpg 1x,
 										 res/assets/images/jpg/package_2x.jpg 2x,
@@ -506,7 +496,7 @@
 						<div id="workDiv7">
 							<a href="res/assets/images/jpg/postcard_front_org.jpg" data-lightbox="postcard" data-title="Save the Date Postcard and Logo Design">
 								<figure>
-									<img src="res/assets/images/jpg/postcard_1x.jpg"
+									<img itemprop="image" src="res/assets/images/jpg/postcard_1x.jpg"
 										 alt="postcard design"
 										 srcset="res/assets/images/jpg/postcard_1x.jpg 1x,
 										 res/assets/images/jpg/postcard_2x.jpg 2x,
@@ -523,7 +513,7 @@
 						<div id="workDiv8">
 							<a href="res/assets/images/jpg/card_org.jpg" data-lightbox="Business" data-title="Blues Band Business Card">
 								<figure>
-									<img src="res/assets/images/jpg/card_1x.jpg"
+									<img itemprop="image" src="res/assets/images/jpg/card_1x.jpg"
 										 alt="business card design"
 										 srcset="res/assets/images/jpg/card_1x.jpg 1x,
 										 res/assets/images/jpg/card_2x.jpg 2x,
@@ -761,7 +751,7 @@
 
 					<!--<figure>-->
 
-						<a href="mailto:0iamjennifer0@gmail.com">
+						<a itemprop="email" href="mailto:0iamjennifer0@gmail.com">
 							<picture>
 								<source type="image/svg+xml" srcset="res/assets/images/svg/emailIcon.svg">
 								<img src="res/assets/images/png/emailIcon.png" alt="email icon" id="emIcon" />
