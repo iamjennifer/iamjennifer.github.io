@@ -140,7 +140,7 @@
   &:target {
 
     @include breakpoint(mobile) {
-      height: 10%;
+      height: 12%;
     }
 
     height: 8%;
@@ -155,7 +155,7 @@
 
     & + .page-wrap .main-header {
       @include breakpoint(mobile) {
-        top: 10%;
+        top: 12%;
       }
       top: 8%;
     }
