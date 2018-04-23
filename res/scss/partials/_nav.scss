@@ -140,7 +140,7 @@
   &:target {
 
     @include breakpoint(mobile) {
-      height: 12%;
+      height: 15%;
     }
 
     height: 8%;
@@ -155,7 +155,7 @@
 
     & + .page-wrap .main-header {
       @include breakpoint(mobile) {
-        top: 12%;
+        top: 15%;
       }
       top: 8%;
     }
@@ -185,6 +185,7 @@
   padding-left: 30px;
   color: $black;
   cursor: pointer;
+
 
   #expList {
 

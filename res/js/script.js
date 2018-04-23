@@ -22,7 +22,6 @@
 /**************************************************************/
 $(document).ready(function(){
 
-
     smoothScrolling();
     prepareList();
 
@@ -31,6 +30,7 @@ $(document).ready(function(){
         div.animate({height:410},"slow");
         div.animate({width:'28.50%'},"slow");
     });
+
 
 
 
@@ -116,7 +116,10 @@ $(document).scroll(function () {
 function smoothScrolling(){
     // Add smooth scrolling to all links
 
-    $("a").on('click', function(event) {
+    $('.smooth-scroll').on('click', function(event) {
+
+        // // For testing
+        // console.log("scrollingFunctionCalled");
 
         // Make sure this.hash has a value before overriding default behavior
         if (this.hash !== "") {
@@ -137,6 +140,11 @@ function smoothScrolling(){
             });
         } // End if
     });
+
+
+
+
+
 }
 
 /**********************************************************************/
@@ -144,6 +152,8 @@ function smoothScrolling(){
 /**********************************************************************/
 
 function prepareList() {
+
+
 
     $('#expList').find('li:has(ul)')
         .click( function(event) {
@@ -156,14 +166,14 @@ function prepareList() {
         .addClass('collapsed')
         .children('ul').hide();
 
-    //Hack to add links inside the cv
-    $('#expList a').unbind('click').click(function () {
-
-        // window.open($(this).attr('href'),"_self");
-        smoothScrolling();
-        // return false;
-
-    });
+    //Hack to add links inside the cv (you need to add this part if you are not using smooth scrolling)
+    // $('#expList a').unbind('click').click(function () {
+    //
+    //     window.open($(this).attr('href'),"_self");
+    //
+    //     return false;
+    //
+    // });
 
 
 }

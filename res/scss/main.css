@@ -245,7 +245,7 @@ html {
   height: 8%; }
   @media (max-width: 40.938em) {
     #main-nav:target {
-      height: 12%; } }
+      height: 15%; } }
   #main-nav:target + .page-wrap .open-menu {
     display: none; }
   #main-nav:target + .page-wrap .close-menu {
@@ -254,7 +254,7 @@ html {
     top: 8%; }
     @media (max-width: 40.938em) {
       #main-nav:target + .page-wrap .main-header {
-        top: 12%; } }
+        top: 15%; } }
 
 /* Side navigation 需要配合ＪＳ*/
 #sideNav {
