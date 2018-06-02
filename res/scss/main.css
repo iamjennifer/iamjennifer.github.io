@@ -242,7 +242,7 @@ html {
     display: none; }
 
 #main-nav:target {
-  height: 8%; }
+  height: 10%; }
   @media (max-width: 40.938em) {
     #main-nav:target {
       height: 15%; } }
@@ -251,7 +251,7 @@ html {
   #main-nav:target + .page-wrap .close-menu {
     display: block; }
   #main-nav:target + .page-wrap .main-header {
-    top: 8%; }
+    top: 10%; }
     @media (max-width: 40.938em) {
       #main-nav:target + .page-wrap .main-header {
         top: 15%; } }
