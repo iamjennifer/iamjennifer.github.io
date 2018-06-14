@@ -183,7 +183,7 @@ function prepareList() {
 /* timer animation for skill section                          */
 /**************************************************************/
 
-$({countNum: $('#counter1').text()}).animate({countNum: 88}, {
+$({countNum: $('#counter1').text()}).animate({countNum: 90}, {
     duration: 1500,
     easing:'linear',
     step: function() {
@@ -193,7 +193,7 @@ $({countNum: $('#counter1').text()}).animate({countNum: 88}, {
     }
 });
 
-$({countNum: $('#counter2').text()}).animate({countNum: 93}, {
+$({countNum: $('#counter2').text()}).animate({countNum: 96}, {
     duration: 1500,
     easing:'linear',
     step: function() {
@@ -203,7 +203,7 @@ $({countNum: $('#counter2').text()}).animate({countNum: 93}, {
     }
 });
 
-$({countNum: $('#counter3').text()}).animate({countNum: 85}, {
+$({countNum: $('#counter3').text()}).animate({countNum: 86}, {
     duration: 1500,
     easing:'linear',
     step: function() {
@@ -213,7 +213,7 @@ $({countNum: $('#counter3').text()}).animate({countNum: 85}, {
     }
 });
 
-$({countNum: $('#counter4').text()}).animate({countNum: 79}, {
+$({countNum: $('#counter4').text()}).animate({countNum: 78}, {
     duration: 1500,
     easing:'linear',
     step: function() {
