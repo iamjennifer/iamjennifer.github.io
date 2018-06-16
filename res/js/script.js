@@ -192,7 +192,7 @@ $({countNum: $('#counter1').text()}).animate({countNum: 86}, {
     }
 });
 
-$({countNum: $('#counter2').text()}).animate({countNum: 93}, {
+$({countNum: $('#counter2').text()}).animate({countNum: 92}, {
     duration: 1500,
     easing:'linear',
     step: function() {
@@ -212,7 +212,7 @@ $({countNum: $('#counter3').text()}).animate({countNum: 73}, {
     }
 });
 
-$({countNum: $('#counter4').text()}).animate({countNum: 56}, {
+$({countNum: $('#counter4').text()}).animate({countNum: 94}, {
     duration: 1500,
     easing:'linear',
     step: function() {
@@ -222,7 +222,7 @@ $({countNum: $('#counter4').text()}).animate({countNum: 56}, {
     }
 });
 
-$({countNum: $('#counter5').text()}).animate({countNum: 69}, {
+$({countNum: $('#counter5').text()}).animate({countNum: 70}, {
     duration: 1500,
     easing:'linear',
     step: function() {

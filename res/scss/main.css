@@ -594,72 +594,72 @@ section {
   25% {
     -webkit-transform: rotate(0deg); }
   100% {
-    -webkit-transform: rotate(150deg); }
+    -webkit-transform: rotate(135deg); }
   100% {
-    -webkit-transform: rotate(150deg); } }
+    -webkit-transform: rotate(135deg); } }
 @keyframes rotate-lt2 {
   0% {
     transform: rotate(0deg); }
   25% {
     transform: rotate(0deg); }
   50% {
-    transform: rotate(150deg); }
+    transform: rotate(135deg); }
   100% {
-    transform: rotate(150deg); } }
+    transform: rotate(135deg); } }
 @-webkit-keyframes rotate-lt3 {
   0% {
     -webkit-transform: rotate(0deg); }
   25% {
     -webkit-transform: rotate(0deg); }
   100% {
-    -webkit-transform: rotate(110deg); }
+    -webkit-transform: rotate(70deg); }
   100% {
-    -webkit-transform: rotate(110deg); } }
+    -webkit-transform: rotate(70deg); } }
 @keyframes rotate-lt3 {
   0% {
     transform: rotate(0deg); }
   25% {
     transform: rotate(0deg); }
   50% {
-    transform: rotate(110deg); }
+    transform: rotate(70deg); }
   100% {
-    transform: rotate(110deg); } }
+    transform: rotate(70deg); } }
 @-webkit-keyframes rotate-lt4 {
   0% {
     -webkit-transform: rotate(0deg); }
   25% {
     -webkit-transform: rotate(0deg); }
   100% {
-    -webkit-transform: rotate(80deg); }
+    -webkit-transform: rotate(137deg); }
   100% {
-    -webkit-transform: rotate(80deg); } }
+    -webkit-transform: rotate(137deg); } }
 @keyframes rotate-lt4 {
   0% {
     transform: rotate(0deg); }
   25% {
     transform: rotate(0deg); }
   50% {
-    transform: rotate(80deg); }
+    transform: rotate(137deg); }
   100% {
-    transform: rotate(80deg); } }
+    transform: rotate(137deg); } }
 @-webkit-keyframes rotate-lt5 {
   0% {
     -webkit-transform: rotate(0deg); }
   25% {
     -webkit-transform: rotate(0deg); }
   100% {
-    -webkit-transform: rotate(95deg); }
+    -webkit-transform: rotate(45deg); }
   100% {
-    -webkit-transform: rotate(95deg); } }
+    -webkit-transform: rotate(45deg); } }
 @keyframes rotate-lt5 {
   0% {
     transform: rotate(0deg); }
   25% {
     transform: rotate(0deg); }
   50% {
-    transform: rotate(95deg); }
+    transform: rotate(45deg); }
   100% {
-    transform: rotate(95deg); } }
+    transform: rotate(45deg); } }
             #skillSection #skillWrapper .skillDiv .spinnerWrapper .spinner span:first-child span.leftSpan {
               left: 100%;
               border-top-left-radius: 0;

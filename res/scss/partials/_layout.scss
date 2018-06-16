@@ -341,10 +341,10 @@ section {
 
               @include keyframes-transform(rotate-rt, rotate(0deg), rotate(180deg), rotate(180deg), rotate(180deg));
               @include keyframes-transform(rotate-lt, rotate(0deg), rotate(0deg), rotate(125deg), rotate(125deg));
-              @include keyframes-transform(rotate-lt2, rotate(0deg), rotate(0deg), rotate(150deg), rotate(150deg));
-              @include keyframes-transform(rotate-lt3, rotate(0deg), rotate(0deg), rotate(110deg), rotate(110deg));
-              @include keyframes-transform(rotate-lt4, rotate(0deg), rotate(0deg), rotate(80deg), rotate(80deg));
-              @include keyframes-transform(rotate-lt5, rotate(0deg), rotate(0deg), rotate(95deg), rotate(95deg));
+              @include keyframes-transform(rotate-lt2, rotate(0deg), rotate(0deg), rotate(135deg), rotate(135deg));
+              @include keyframes-transform(rotate-lt3, rotate(0deg), rotate(0deg), rotate(70deg), rotate(70deg));
+              @include keyframes-transform(rotate-lt4, rotate(0deg), rotate(0deg), rotate(137deg), rotate(137deg));
+              @include keyframes-transform(rotate-lt5, rotate(0deg), rotate(0deg), rotate(45deg), rotate(45deg));
 
               span.leftSpan {
                 left: 100%;
