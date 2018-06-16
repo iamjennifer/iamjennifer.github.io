@@ -1,7 +1,7 @@
 /**
 
  Project Name :: /i.am.jennifer/ Online Portfolio
- Site :: iamjennifer.com
+ Site :: www.iamjennifer.com
 
  ----------------------------------------------------------
 
@@ -91,7 +91,6 @@ $(document).scroll(function () {
     if (y > 4500) {
         $('#personDiv1').delay(100).fadeIn();
         $('#personDiv2').slideDown("slow");
-
 
     }
 
