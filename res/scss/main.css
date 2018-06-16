@@ -932,10 +932,10 @@ section {
       @media (max-width: 40.938em) {
         #contactSection figure .contactDiv img {
           padding: 3px; } }
-    #contactSection figure .contactDiv #twIcon, #contactSection figure .contactDiv #fbIcon, #contactSection figure .contactDiv #liIcon, #contactSection figure .contactDiv #emIcon {
+    #contactSection figure .contactDiv #ptIcon, #contactSection figure .contactDiv #fbIcon, #contactSection figure .contactDiv #liIcon, #contactSection figure .contactDiv #emIcon {
       display: none; }
       @media (max-width: 40.938em) {
-        #contactSection figure .contactDiv #twIcon, #contactSection figure .contactDiv #fbIcon, #contactSection figure .contactDiv #liIcon, #contactSection figure .contactDiv #emIcon {
+        #contactSection figure .contactDiv #ptIcon, #contactSection figure .contactDiv #fbIcon, #contactSection figure .contactDiv #liIcon, #contactSection figure .contactDiv #emIcon {
           display: inline; } }
 
 footer {

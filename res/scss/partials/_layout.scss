@@ -634,7 +634,7 @@ section {
         max-width: 65px;
 
       }
-      #twIcon, #fbIcon, #liIcon, #emIcon {
+      #ptIcon, #fbIcon, #liIcon, #emIcon {
         @include breakpoint(mobile) {
           display: inline;
         }

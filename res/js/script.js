@@ -96,7 +96,7 @@ $(document).scroll(function () {
     }
 
     if (y > 5100) {
-        $('#twIcon').slideDown("slow");
+        $('#ptIcon').slideDown("slow");
         $('#fbIcon').slideDown("slow");
         $('#liIcon').slideDown("slow");
         $('#emIcon').slideDown("slow");
@@ -183,7 +183,7 @@ function prepareList() {
 /* timer animation for skill section                          */
 /**************************************************************/
 
-$({countNum: $('#counter1').text()}).animate({countNum: 90}, {
+$({countNum: $('#counter1').text()}).animate({countNum: 86}, {
     duration: 1500,
     easing:'linear',
     step: function() {
@@ -193,7 +193,7 @@ $({countNum: $('#counter1').text()}).animate({countNum: 90}, {
     }
 });
 
-$({countNum: $('#counter2').text()}).animate({countNum: 96}, {
+$({countNum: $('#counter2').text()}).animate({countNum: 93}, {
     duration: 1500,
     easing:'linear',
     step: function() {
@@ -203,7 +203,7 @@ $({countNum: $('#counter2').text()}).animate({countNum: 96}, {
     }
 });
 
-$({countNum: $('#counter3').text()}).animate({countNum: 86}, {
+$({countNum: $('#counter3').text()}).animate({countNum: 73}, {
     duration: 1500,
     easing:'linear',
     step: function() {
@@ -213,7 +213,7 @@ $({countNum: $('#counter3').text()}).animate({countNum: 86}, {
     }
 });
 
-$({countNum: $('#counter4').text()}).animate({countNum: 78}, {
+$({countNum: $('#counter4').text()}).animate({countNum: 56}, {
     duration: 1500,
     easing:'linear',
     step: function() {
@@ -223,7 +223,7 @@ $({countNum: $('#counter4').text()}).animate({countNum: 78}, {
     }
 });
 
-$({countNum: $('#counter5').text()}).animate({countNum: 81}, {
+$({countNum: $('#counter5').text()}).animate({countNum: 69}, {
     duration: 1500,
     easing:'linear',
     step: function() {
